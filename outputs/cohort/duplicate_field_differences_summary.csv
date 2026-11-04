@@ -1,0 +1,13 @@
+,median,min,max,sum,groups_with_any
+any_difference:admission_clinical,37.5,0.0,89.0,1484.0,36
+any_difference:follow_up_M1_to_M12,10.5,0.0,50.0,533.0,28
+any_difference:hospital_course_disposition,2.0,0.0,4.0,81.0,33
+any_difference:identity_dates,1.0,0.0,2.0,26.0,20
+any_difference:sociodemographic_prehospital,6.0,0.0,13.0,237.0,36
+any_difference:total,62.5,0.0,124.0,2361.0,37
+both_present_differ:admission_clinical,10.0,0.0,39.0,447.0,35
+both_present_differ:follow_up_M1_to_M12,0.0,0.0,9.0,59.0,15
+both_present_differ:hospital_course_disposition,1.0,0.0,2.0,36.0,27
+both_present_differ:identity_dates,0.0,0.0,2.0,19.0,16
+both_present_differ:sociodemographic_prehospital,3.0,0.0,10.0,135.0,34
+both_present_differ:total,18.0,0.0,51.0,696.0,35

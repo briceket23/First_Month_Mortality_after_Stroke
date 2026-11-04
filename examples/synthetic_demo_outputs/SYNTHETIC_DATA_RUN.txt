@@ -1,0 +1,1 @@
+These outputs come from the synthetic fixture (no registry data) and demonstrate the pipeline only.

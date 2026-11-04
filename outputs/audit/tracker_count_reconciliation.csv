@@ -1,0 +1,23 @@
+item,tracker_value,rule,revision_value,note
+Source rows,"1,653",data rows in sheet,1653,
+Source columns,251,columns,251,
+Distinct unique_code values,"1,615",distinct non-missing codes,1615,
+Repeated-code groups,38 (76 rows),codes occurring more than once,38 (76 rows),
+Groups with any field discrepancy,37/38,"any of 250 fields differs, missing-vs-present counted",37/38,
+Groups with timing/outcome-field differences,35/38,"tracker field set (dates, LOS, disposition, output processing, cause of death, follow-up durations, death codes); missing-vs-present counted",35/38,
+"  same, both rows non-missing",—,"as above, only two different non-missing values",28/38,
+Groups with selected clinical-variable differences,28 (author-reported),selected-variable list unavailable; nearest revision rule = any admission-clinical field with two different non-missing values,35/38,Not reproducible without the original variable list
+Release before entry,23 rows (plausible-year filter),"release < entry, both years 1900-2030",23,
+"  same, unfiltered",24 (naive),"release < entry, any year",24,
+"  same, registry window",—,"entry (2010, 2023), release (2010, 2024) (rule used in the analysis)",22,The 2009 release year falls outside the analysis window and is flagged as an impossible release year instead
+LOS differs from date interval by >1 day,174 rows (plausible-year filter),"|recorded LOS - (release - entry)| > 1, both years plausible",174,
+"  same, tolerance >2 days",—,"|difference| > 2 days, plausible years; the analysis applies this tolerance after excluding derived stays >120 d",115 (84 in the analysis),
+Union of the two timing flags,175 distinct rows,"release<entry OR |diff|>1, plausible years",175,
+Reported total flagged rows,194 (author-reported),flag classes not documented,not reproducible,Requires the original audit build script; the revision's own flags are listed in cleaning_and_integrity_log.csv
+Implausible dates,"rows 767, 773, 808",year outside 1900-2030,Release date: rows [767] (year 2916); Date of entry: rows [773] (year 3016); Date of birth: rows [808] (year 2930),Not corrected; date of birth is not used in the analysis
+Raw death1 values,Yes 162; No 658; '9' 1; missing 832,"raw 1,653 rows",missing 832; No 658; Yes 162; 9 1,
+Raw death3 values,Yes 165; No 553; '3' 2; '9' 1; missing 932,"raw 1,653 rows",missing 932; No 553; Yes 165; 3 2; 9 1,
+Raw NIHSS missingness,"790/1,653 = 47.8%",raw rows,"790/1,653 = 47.8%",
+Raw modified Rankin missingness,"857/1,653 = 51.8%",raw rows,"857/1,653 = 51.8%",
+Raw SA O2 missingness,"1,122/1,653 = 67.9%",raw rows,"1122/1,653 = 67.9%",
+Raw BMI missingness,"1,466/1,653 = 88.7%",raw rows,"1466/1,653 = 88.7%",

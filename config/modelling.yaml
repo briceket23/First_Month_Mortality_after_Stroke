@@ -1,0 +1,30 @@
+primary_model: L2 logistic regression; C grid [0.001,0.003,0.01,0.03,0.1,0.3,1] by inner CV
+challengers:
+- RF (400 trees; min leaf, max features tuned)
+- HistGradientBoosting (lr, depth, L2 tuned)
+- XGBoost (lr, depth, min child weight tuned; 300 trees; subsample 0.8)
+clinical_reference:
+- age
+- nihss
+- gcs
+- mrs
+- hemorrhagic
+- male
+feature_selection: none (all candidates; L2 penalty tuned by inner CV)
+nested_cv:
+  outer_folds: 5
+  outer_repeats: 5
+  inner_folds: 3
+temporal_split: single cut-off fixed before modelling at the 70th percentile of admission dates among ALL eligible patients (outcome-independent); same cut-off for
+  every endpoint variant
+calibration: primary uncalibrated; Platt/isotonic fitted by inner CV in training folds as sensitivity; no test-set selection
+risk_tiers:
+  cut_points:
+  - 0.1
+  - 0.4
+  pre_specified: true
+dca_threshold_range:
+- 0.05
+- 0.5
+bootstrap_n: 1000
+seed: 20261016

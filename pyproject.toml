@@ -1,0 +1,8 @@
+[project]
+name = "stroke-reproducibility-rebuilt"
+version = "3.0.0"
+description = "NEURI-D-26-00184: first-month mortality after stroke in a Cameroonian registry - outcome ascertainment and admission-time prediction (aggregate outputs only)"
+requires-python = ">=3.11"
+dependencies = ["pandas>=3.0", "numpy", "scipy", "scikit-learn>=1.9", "xgboost", "shap", "statsmodels", "openpyxl", "matplotlib", "python-docx", "pyyaml", "pytest"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]

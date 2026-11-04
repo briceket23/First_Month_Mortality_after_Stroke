@@ -1,0 +1,5 @@
+disposition,n,stay_known,median,q1,q3,max,le7,d8_30,d28_32,gt30
+Died in hospital,326,324,4.0,2.0,8.0,70.0,237,82,1,5
+Discharged home,949,935,7.0,4.0,11.0,65.0,521,395,11,19
+Transferred,33,33,6.0,2.0,10.0,22.0,20,13,0,0
+'Other' disposition,148,147,6.0,4.0,10.0,32.0,91,55,1,1

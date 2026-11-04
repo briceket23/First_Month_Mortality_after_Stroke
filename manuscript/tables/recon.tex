@@ -1,0 +1,25 @@
+\begin{table}[htbp]\centering\small
+\caption{Outcome provenance under the revised endpoint (eligible patients, $n=1{,}579$). A1: disposition `death' denotes death before leaving the unit, with the stay ending at death. A2: a post-discharge death recorded in the month-1 field occurred within 30 days of admission.}\label{tab:recon}
+\begin{tabular}{>{\raggedright\arraybackslash}p{4.8cm}c>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{2.0cm}crr}
+\toprule
+Evidence class & Label & Source & Timing & Grade & $n$ & \% \\
+\midrule
+In-hospital death, stay $\le$30 d & 1 & Hospital record & Established (A1) & I & 305 & 19.3 \\
+Death recorded in month-1 field after discharge & 1 & \texttt{death1} & Assumption A2 (dictionary-supported) & R & 33 & 2.1 \\
+In-hospital death after day 30 & 0 & Hospital record & Established (A1) & I & 2 & 0.1 \\
+Alive at month-1 contact & 0 & \texttt{death1} & Established to month 1 after stroke & R & 617 & 39.1 \\
+Discharged alive after day 30 & 0 & Hospital record & Established & I & 5 & 0.3 \\
+Alive at month-3/6/9 contact & 0 & \texttt{death3/6/9} & Established & R & 20 & 1.3 \\
+Discharged alive by day 30, no follow-up & -- & -- & Unresolved & U & 349 & 22.1 \\
+No disposition, no follow-up & -- & -- & Unresolved & U & 120 & 7.6 \\
+``Other'' disposition, no follow-up & -- & -- & Unresolved & U & 90 & 5.7 \\
+Contradictory status fields & -- & -- & Unresolved & U & 10 & 0.6 \\
+Stay measures disagree across day 30 & -- & -- & Unresolved & U & 8 & 0.5 \\
+Column-misaligned record & -- & -- & Unresolved & U & 10 & 0.6 \\
+Duplicate rows disagree on outcome & -- & -- & Unresolved & U & 7 & 0.4 \\
+In-hospital death, stay unknown & -- & -- & Unresolved & U & 2 & 0.1 \\
+Death at month 3--9 only, timing unknown & -- & -- & Unresolved & U & 1 & 0.1 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{0.95\linewidth}\footnotesize Labelled: 982; deaths: 338; unresolved: 597. Grade (pre-specified evidence grades): E1/E0, event or survival confirmed by documented dates or an unequivocal field definition; R, recorded status whose time origin is not established; I, inferred from disposition and stay under stated assumptions; U, unresolved or conflicting; X, undocumented code. No label currently reaches E1/E0.\end{minipage}
+\end{table}

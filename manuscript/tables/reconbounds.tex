@@ -1,0 +1,17 @@
+\begin{table}[htbp]\centering\small
+\caption{Estimates of 30-day mortality among all eligible patients ($n=1{,}579$). Only the bounds are assumption-free; no single value is identified by the data.}\label{tab:reconbounds}
+\begin{tabular}{>{\raggedright\arraybackslash}p{5.0cm}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{5.4cm}}
+\toprule
+Estimator & Mortality, \% (95\% CI) & Population / assumption \\
+\midrule
+Labelled-subset proportion & 34.4 (31.5--37.4) & Labelled patients only; selectively ascertained \\
+All unresolved survived (lower bound) & 21.4 & Logical bound \\
+All unresolved died (upper bound) & 59.2 & Logical bound \\
+In-hospital death within 30 days & 23.6 (21.4--26.0) & Known disposition, $n=1{,}292$; excludes post-discharge deaths \\
+Inverse-probability-of-observation weighted & 27.5 (25.0--30.1) & MAR given admission data, period and disposition; $n=1{,}456$ \\
+Pattern-mixture, $\delta=1$ (2010--14 post-discharge risk) & 30.7 & MAR-type reference \\
+Pattern-mixture, $\delta=1$ (period-specific) & 29.8 & MAR within period \\
+Pattern-mixture, $\delta$ from 0.25 to 8 & 26.6--41.7 & MNAR sensitivity range \\
+\bottomrule
+\end{tabular}
+\end{table}

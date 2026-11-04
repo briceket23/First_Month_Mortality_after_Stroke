@@ -1,0 +1,156 @@
+{
+ "endpoint_name": "recorded month-1 vital status (death1 Yes/No only; no reconstruction; time origin per dictionary implicit)",
+ "eligible": 882,
+ "with_recorded_status": 526,
+ "recorded_deaths": 120,
+ "mortality_among_recorded_pct": 22.8,
+ "by_period": [
+  {
+   "admission_year": "2010-12",
+   "eligible": "249",
+   "recorded_month1_status": "238",
+   "recorded_deaths": "60",
+   "recorded_pct": "95.6",
+   "mortality_among_recorded_pct": "25.2"
+  },
+  {
+   "admission_year": "2013-14",
+   "eligible": "154",
+   "recorded_month1_status": "143",
+   "recorded_deaths": "36",
+   "recorded_pct": "92.9",
+   "mortality_among_recorded_pct": "25.2"
+  },
+  {
+   "admission_year": "2015-16",
+   "eligible": "158",
+   "recorded_month1_status": "85",
+   "recorded_deaths": "12",
+   "recorded_pct": "53.8",
+   "mortality_among_recorded_pct": "14.1"
+  },
+  {
+   "admission_year": "2017-19",
+   "eligible": "144",
+   "recorded_month1_status": "31",
+   "recorded_deaths": "8",
+   "recorded_pct": "21.5",
+   "mortality_among_recorded_pct": "25.8"
+  },
+  {
+   "admission_year": "2020",
+   "eligible": "48",
+   "recorded_month1_status": "9",
+   "recorded_deaths": "0",
+   "recorded_pct": "18.8",
+   "mortality_among_recorded_pct": "0.0"
+  },
+  {
+   "admission_year": "2021-23",
+   "eligible": "129",
+   "recorded_month1_status": "20",
+   "recorded_deaths": "4",
+   "recorded_pct": "15.5",
+   "mortality_among_recorded_pct": "20.0"
+  }
+ ],
+ "model_results_key": "sensitivity_nested.observed_only and temporal_observed_only in model_results.json (when the reconstructed run has been executed)",
+ "nested_cv_observed_only": {
+  "LR": {
+   "auroc": 0.6090927750410509,
+   "auroc_lo": 0.5502346073813797,
+   "auroc_hi": 0.667950942700722,
+   "auprc": 0.30810655443969925,
+   "slope": 2.9485780309550313,
+   "slope_lo": 0.9239159363687155,
+   "slope_hi": 4.973240125541347,
+   "intercept": 0.004782026790647649,
+   "intercept_lo": -0.19906947685030782,
+   "intercept_hi": 0.20863353043160313,
+   "brier": 0.1744134177952529,
+   "mean_pred": 0.2272975550628731,
+   "obs_rate": 0.22813688212927757,
+   "n": 526,
+   "events": 120,
+   "slope_per_repeat_mean": 3.1322989689810576,
+   "intercept_per_repeat_mean": 0.004796397466577965,
+   "brier_per_repeat_mean": 0.1745152331124383,
+   "fold_auc_mean": 0.6108049784201546,
+   "fold_auc_sd": 0.042054114849902124,
+   "pooled_oof_auc_by_repeat_mean": 0.6094417077175698,
+   "pooled_oof_auc_by_repeat_range": [
+    0.6085385878489327,
+    0.6103448275862069
+   ]
+  },
+  "ClinRef": {
+   "auroc": 0.6213259441707717,
+   "auroc_lo": 0.5636512998097318,
+   "auroc_hi": 0.6790005885318116,
+   "auprc": 0.30906586533613284,
+   "slope": 0.6961206715922917,
+   "slope_lo": 0.2936792034593476,
+   "slope_hi": 1.0985621397252359,
+   "intercept": -0.0007990857746930758,
+   "intercept_lo": -0.2092898887812759,
+   "intercept_hi": 0.20769171723188978,
+   "brier": 0.1724521960902385,
+   "mean_pred": 0.228271163804904,
+   "obs_rate": 0.22813688212927757,
+   "n": 526,
+   "events": 120,
+   "slope_per_repeat_mean": 0.670230845450533,
+   "intercept_per_repeat_mean": -0.0008025758685411709,
+   "brier_per_repeat_mean": 0.1727479666244339,
+   "fold_auc_mean": 0.6202085215296597,
+   "fold_auc_sd": 0.05074262996846307,
+   "pooled_oof_auc_by_repeat_mean": 0.6189295977011494,
+   "pooled_oof_auc_by_repeat_range": [
+    0.612848932676519,
+    0.6250102627257799
+   ]
+  },
+  "n": 526,
+  "events": 120
+ },
+ "temporal_observed_only": {
+  "n_train": 477,
+  "events_train": 112,
+  "n_test": 49,
+  "events_test": 8,
+  "LR": {
+   "auroc": 0.551829268292683,
+   "auroc_lo": 0.2913740353492081,
+   "auroc_hi": 0.8122845012361579,
+   "auprc": 0.26686117936117937,
+   "slope": 2.4025406043472985,
+   "slope_lo": -4.985203848627328,
+   "slope_hi": 9.790285057321924,
+   "intercept": -0.444107047916939,
+   "intercept_lo": -1.2021866028623223,
+   "intercept_hi": 0.31397250702844426,
+   "brier": 0.1405342746298607,
+   "mean_pred": 0.23312651760912265,
+   "obs_rate": 0.16326530612244897,
+   "n": 49,
+   "events": 8
+  },
+  "ClinRef": {
+   "auroc": 0.5396341463414634,
+   "auroc_lo": 0.3193559961411294,
+   "auroc_hi": 0.7599122965417975,
+   "auprc": 0.2309760434760435,
+   "slope": 0.3144832260313947,
+   "slope_lo": -1.1014322772073424,
+   "slope_hi": 1.730398729270132,
+   "intercept": -0.4366077590046198,
+   "intercept_lo": -1.2101448821905074,
+   "intercept_hi": 0.33692936418126773,
+   "brier": 0.14648799370610185,
+   "mean_pred": 0.22842643379696503,
+   "obs_rate": 0.16326530612244897,
+   "n": 49,
+   "events": 8
+  }
+ }
+}

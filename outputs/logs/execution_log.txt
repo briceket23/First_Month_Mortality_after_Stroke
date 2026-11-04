@@ -1,0 +1,1359 @@
+Execution log, started 2026-11-03 23:47:01; mode=all; label=reconstructed_provisional; data=G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\data\raw\database_stroke_copy.xlsx
+
+=== 2026-11-03 23:47:01 START stage 1 integrity/duplicates/endpoint/cohorts: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore -m stroke_repro.stage1_data
+raw md5 08541ef199c1656c184291f24b4cc3e3; 1653 rows x 251 source columns; src_id unique
+Reproduction of submitted reconstruction: {'after_dedup': 1615, 'observed': 803, 'inferred': 218, 'unlabelled': 594, 'labelled': 1021, 'deaths': 345, 'mortality_pct': np.float64(33.8), 'observed_only_deaths': 162, 'class_counts': {'observed_death1': 803, 'unlabelled': 594, 'inferred_inhosp_death_le30': 183, 'inferred_later_followup_alive': 23, 'inferred_long_stay_alive': 6, 'inferred_inhosp_death_gt30': 6}}
+{'D2_same_encounter_compatible': 26, 'D3_same_encounter_outcome_conflict': 7, 'D1_identifier_collision': 4, 'D0_non_record': 1}
+primary {'source_rows': 1653, 'after_reconciliation': 1618, 'excluded_blank_records': 6, 'excluded_no_valid_admission_date': 6, 'excluded_age_lt18': 3, 'excluded_tia': 24, 'eligible': 1579, 'labelled': 982, 'deaths': 338, 'unresolved': 597, 'mortality_labelled_pct': 34.4}
+strict_timing {'source_rows': 1653, 'after_reconciliation': 1618, 'excluded_blank_records': 6, 'excluded_no_valid_admission_date': 6, 'excluded_age_lt18': 3, 'excluded_tia': 24, 'eligible': 1579, 'labelled': 949, 'deaths': 305, 'unresolved': 630, 'mortality_labelled_pct': 32.1}
+dup_keep_first {'source_rows': 1653, 'after_reconciliation': 1615, 'excluded_blank_records': 8, 'excluded_no_valid_admission_date': 5, 'excluded_age_lt18': 3, 'excluded_tia': 24, 'eligible': 1575, 'labelled': 982, 'deaths': 340, 'unresolved': 593, 'mortality_labelled_pct': 34.6}
+dup_exclude_conflicts {'source_rows': 1653, 'after_reconciliation': 1603, 'excluded_blank_records': 6, 'excluded_no_valid_admission_date': 6, 'excluded_age_lt18': 3, 'excluded_tia': 24, 'eligible': 1564, 'labelled': 979, 'deaths': 337, 'unresolved': 585, 'mortality_labelled_pct': 34.4}
+primary classes {'N2_month1_alive': 617, 'U_discharged_alive_no_followup': 349, 'E1_inhosp_death_le30': 305, 'U_disposition_missing_no_followup': 120, 'U_other_disposition_no_followup': 90, 'E2_month1_death_postdischarge': 33, 'N4_alive_later_contact': 20, 'U_contradictory_status': 10, 'U_record_misaligned': 10, 'U_los_conflict_at_boundary': 8, 'U_duplicate_outcome_conflict': 7, 'N3_discharged_alive_gt30': 5, 'U_inhosp_death_timing_unknown': 2, 'N1_inhosp_death_gt30': 2, 'U_later_death_timing_unknown': 1}
+y_class                        E1_inhosp_death_le30  E2_month1_death_postdischarge  N1_inhosp_death_gt30  N2_month1_alive  N3_discharged_alive_gt30  N4_alive_later_contact  U_contradictory_status  U_discharged_alive_no_followup  U_disposition_missing_no_followup  U_duplicate_outcome_conflict  U_inhosp_death_timing_unknown  U_later_death_timing_unknown  U_los_conflict_at_boundary  U_other_disposition_no_followup  U_record_misaligned
+y_orig_class                                                                                                                                                                                                                                                                                                                                                                                                                                       
+inferred_inhosp_death_gt30                        0                              0                     2                0                         0                       0                       0                               0                                  0                             0                              0                             0                           3                                0                    1
+inferred_inhosp_death_le30                      180                              0                     0                0                         0                       0                       1                               0                                  0                             0                              0                             0                           2                                0                    0
+inferred_later_followup_alive                     0                              0                     0                0                         0                      20                       0                               0                                  0                             1                              0                             0                           0                                0                    1
+inferred_long_stay_alive                          0                              0                     0                0                         5                       0                       0                               1                                  0                             0                              0                             0                           0                                0                    0
+not in submitted cohort                           0                              0                     0                1                         0                       0                       0                               1                                  1                             0                              0                             0                           0                                0                    1
+observed_death1                                 125                             33                     0              613                         0                       0                       9                               0                                  0                             3                              0                             0                           0                                0                    7
+unlabelled                                        0                              0                     0                3                         0                       0                       0                             347                                119                             3                              2                             1                           3                               90                    0
+=== END stage 1 integrity/duplicates/endpoint/cohorts: exit 0 in 5s
+
+=== 2026-11-03 23:47:06 START stage 1b duplicate field audit: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore -m stroke_repro.stage1b_duplicate_fields
+                                                  median  min    max     sum  groups_with_any
+any_difference:admission_clinical                   37.5  0.0   89.0  1484.0               36
+any_difference:follow_up_M1_to_M12                  10.5  0.0   50.0   533.0               28
+any_difference:hospital_course_disposition           2.0  0.0    4.0    81.0               33
+any_difference:identity_dates                        1.0  0.0    2.0    26.0               20
+any_difference:sociodemographic_prehospital          6.0  0.0   13.0   237.0               36
+any_difference:total                                62.5  0.0  124.0  2361.0               37
+both_present_differ:admission_clinical              10.0  0.0   39.0   447.0               35
+both_present_differ:follow_up_M1_to_M12              0.0  0.0    9.0    59.0               15
+both_present_differ:hospital_course_disposition      1.0  0.0    2.0    36.0               27
+both_present_differ:identity_dates                   0.0  0.0    2.0    19.0               16
+both_present_differ:sociodemographic_prehospital     3.0  0.0   10.0   135.0               34
+both_present_differ:total                           18.0  0.0   51.0   696.0               35
+=== END stage 1b duplicate field audit: exit 0 in 4s
+
+=== 2026-11-03 23:47:10 START stage 1c restricted annex (row-level; data/processed only): G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore -m stroke_repro.stage1c_restricted_annex
+restricted annex written: 38 25 33 35
+=== END stage 1c restricted annex (row-level; data/processed only): exit 0 in 1s
+
+=== 2026-11-03 23:47:11 START stage 1d preliminary-audit count reconciliation + stay tables: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore -m stroke_repro.stage1d_tracker_reconciliation
+                                                  item                               tracker_value                                                                                                                                          rule                                                                                                      revision_value                                                                                                             note
+0                                          Source rows                                       1,653                                                                                                                            data rows in sheet                                                                                                                1653                                                                                                                 
+1                                       Source columns                                         251                                                                                                                                       columns                                                                                                                 251                                                                                                                 
+2                          Distinct unique_code values                                       1,615                                                                                                                    distinct non-missing codes                                                                                                                1615                                                                                                                 
+3                                 Repeated-code groups                                38 (76 rows)                                                                                                                codes occurring more than once                                                                                                        38 (76 rows)                                                                                                                 
+4                    Groups with any field discrepancy                                       37/38                                                                                         any of 250 fields differs, missing-vs-present counted                                                                                                               37/38                                                                                                                 
+5         Groups with timing/outcome-field differences                                       35/38  tracker field set (dates, LOS, disposition, output processing, cause of death, follow-up durations, death codes); missing-vs-present counted                                                                                                               35/38                                                                                                                 
+6                          same, both rows non-missing                                           —                                                                                               as above, only two different non-missing values                                                                                                               28/38                                                                                                                 
+7   Groups with selected clinical-variable differences                        28 (author-reported)                selected-variable list unavailable; nearest revision rule = any admission-clinical field with two different non-missing values                                                                                                               35/38                                                              Not reproducible without the original variable list
+8                                 Release before entry             23 rows (plausible-year filter)                                                                                                         release < entry, both years 1900-2030                                                                                                                  23                                                                                                                 
+9                                     same, unfiltered                                  24 (naive)                                                                                                                     release < entry, any year                                                                                                                  24                                                                                                                 
+10                               same, registry window                                           —                                                                          entry (2010, 2023), release (2010, 2024) (rule used in the analysis)                                                                                                                  22     The 2009 release year falls outside the analysis window and is flagged as an impossible release year instead
+11            LOS differs from date interval by >1 day            174 rows (plausible-year filter)                                                                                  |recorded LOS - (release - entry)| > 1, both years plausible                                                                                                                 174                                                                                                                 
+12                             same, tolerance >2 days                                           —                              |difference| > 2 days, plausible years; the analysis applies this tolerance after excluding derived stays >120 d                                                                                            115 (84 in the analysis)                                                                                                                 
+13                       Union of the two timing flags                           175 distinct rows                                                                                                    release<entry OR |diff|>1, plausible years                                                                                                                 175                                                                                                                 
+14                         Reported total flagged rows                       194 (author-reported)                                                                                                                   flag classes not documented                                                                                                    not reproducible  Requires the original audit build script; the revision's own flags are listed in cleaning_and_integrity_log.csv
+15                                   Implausible dates                          rows 767, 773, 808                                                                                                                        year outside 1900-2030  Release date: rows [767] (year 2916); Date of entry: rows [773] (year 3016); Date of birth: rows [808] (year 2930)                                                         Not corrected; date of birth is not used in the analysis
+16                                   Raw death1 values         Yes 162; No 658; '9' 1; missing 832                                                                                                                                raw 1,653 rows                                                                                   missing 832; No 658; Yes 162; 9 1                                                                                                                 
+17                                   Raw death3 values  Yes 165; No 553; '3' 2; '9' 1; missing 932                                                                                                                                raw 1,653 rows                                                                              missing 932; No 553; Yes 165; 3 2; 9 1                                                                                                                 
+18                               Raw NIHSS missingness                           790/1,653 = 47.8%                                                                                                                                      raw rows                                                                                                   790/1,653 = 47.8%                                                                                                                 
+19                     Raw modified Rankin missingness                           857/1,653 = 51.8%                                                                                                                                      raw rows                                                                                                   857/1,653 = 51.8%                                                                                                                 
+20                               Raw SA O2 missingness                         1,122/1,653 = 67.9%                                                                                                                                      raw rows                                                                                                  1122/1,653 = 67.9%                                                                                                                 
+21                                 Raw BMI missingness                         1,466/1,653 = 88.7%                                                                                                                                      raw rows                                                                                                  1466/1,653 = 88.7%                                                                                                                 
+           disposition    n  stay_known  median   q1    q3   max  le7  d8_30  d28_32  gt30
+0     Died in hospital  326         324     4.0  2.0   8.0  70.0  237     82       1     5
+1      Discharged home  949         935     7.0  4.0  11.0  65.0  521    395      11    19
+2          Transferred   33          33     6.0  2.0  10.0  22.0   20     13       0     0
+3  'Other' disposition  148         147     6.0  4.0  10.0  32.0   91     55       1     1 {'dates': 1424, 'none': 110, 'recorded_los': 45}
+=== END stage 1d preliminary-audit count reconciliation + stay tables: exit 0 in 2s
+
+=== 2026-11-03 23:47:13 START stage 1e data dictionary audit: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore -m stroke_repro.stage1e_dictionary_audit
+{
+ "conformance": {
+  "dictionary_file": "stroke_data_dictionnary.xlsx",
+  "dictionary_md5": "be778aa084720376bdc1c27392a260af",
+  "dictionary_known": true,
+  "dictionary_rows": 256,
+  "workbook_columns": 251,
+  "dictionary_labels_matched_exactly": 242,
+  "dictionary_variables_not_in_workbook": [
+   [
+    "nom",
+    "patients name"
+   ],
+   [
+    "lieusuiv",
+    "Follow-up location/hospital"
+   ],
+   [
+    "tél1",
+    "Number tél 1"
+   ],
+   [
+    "tél2",
+    "Number tél 2"
+   ],
+   [
+    "traithab",
+    "Usual treatment1"
+   ],
+   [
+    "chlorelc",
+    "culture LCR"
+   ],
+   [
+    "datesort1",
+    "Release date1"
+   ],
+   [
+    "pr_arts1",
+    "SysT blood pressure at M"
+   ],
+   [
+    "mci1",
+    "MCI to M1"
+   ],
+   [
+    "gueri_m3",
+    "Complete healing at M3"
+   ],
+   [
+    "mci_m3",
+    "MCI to M3"
+   ],
+   [
+    "guer_m6",
+    "Full healing at M6"
+   ],
+   [
+    "guer_m9",
+    "Full healing at M9"
+   ],
+   [
+    "guer_m12",
+    "Full healing at M12"
+   ]
+  ],
+  "workbook_columns_not_matched_exactly": [
+   "Usual treatment_med",
+   "chlorine LCR",
+   "Dia blood pressure at M1",
+   "MCI at M1",
+   "Full recovery at M3",
+   "MCI at M3",
+   "Full recovery at M6",
+   "Full recovery at M9",
+   "Full recovery at M12"
+  ],
+  "variables_without_type": 94,
+  "descriptions_with_hedging_words": [
+   "age",
+   "CatAge",
+   "typprofe",
+   "délainew",
+   "traithab"
+  ],
+  "descriptions_with_value_codes": 0,
+  "categories": {
+   "Follow-up and Outcomes": 103,
+   "Clinical and Consultation Information": 58,
+   "Laboratory and Diagnostic Tests": 36,
+   "Medical History (ATCD)": 34,
+   "Sociodemographic Information": 25
+  }
+ },
+ "death1_vs_definition_inhospital": [
+  {
+   "period": "2010-12",
+   "Yes": "80",
+   "No": "0",
+   "missing": "2",
+   "n": "82",
+   "pct_recorded_as_dictionary_requires": "97.6"
+  },
+  {
+   "period": "2013-14",
+   "Yes": "44",
+   "No": "4",
+   "missing": "22",
+   "n": "70",
+   "pct_recorded_as_dictionary_requires": "62.9"
+  },
+  {
+   "period": "2015-16",
+   "Yes": "1",
+   "No": "2",
+   "missing": "58",
+   "n": "61",
+   "pct_recorded_as_dictionary_requires": "1.6"
+  },
+  {
+   "period": "2017-19",
+   "Yes": "0",
+   "No": "1",
+   "missing": "66",
+   "n": "67",
+   "pct_recorded_as_dictionary_requires": "0.0"
+  },
+  {
+   "period": "2020",
+   "Yes": "1",
+   "No": "0",
+   "missing": "6",
+   "n": "7",
+   "pct_recorded_as_dictionary_requires": "14.3"
+  },
+  {
+   "period": "2021-23",
+   "Yes": "1",
+   "No": "0",
+   "missing": "31",
+   "n": "32",
+   "pct_recorded_as_dictionary_requires": "3.1"
+  }
+ ],
+ "onset_delay": {
+  "n_nonmissing_all_rows": 1203,
+  "share_at_multiples_of_24": 0.415,
+  "quantiles_all_rows": {
+   "0.25": 4.0,
+   "0.5": 24.0,
+   "0.75": 72.0,
+   "0.9": 125.79999999999995,
+   "0.99": 383.52000000000044
+  },
+  "N2_labels": 617,
+  "N2_with_delay_recorded": 550,
+  "N2_with_delay_gt_threshold": 109,
+  "threshold_hours_assumed": 72
+ }
+}
+death1   Yes  No  missing   n  pct_recorded_as_dictionary_requires
+period                                                            
+2010-12   80   0        2  82                                 97.6
+2013-14   44   4       22  70                                 62.9
+2015-16    1   2       58  61                                  1.6
+2017-19    0   1       66  67                                  0.0
+2020       1   0        6   7                                 14.3
+2021-23    1   0       31  32                                  3.1
+        duration followed1                                  duration followed3                                   
+                      0.0    1.0  7.0  10.0 14.0  30.0 90.0               0.0  1.0  3.0  60.0 85.0 86.0 90.0 99.0
+period                                                                                                           
+2010-12                0.0  213.0  0.0  0.0  0.0   0.0  0.0                  0   91  192    0    0    0    0    1
+2013-14                0.0  140.0  0.0  1.0  0.0   2.0  0.0                  2   57  113    0    0    0    2    0
+2015-16                1.0  122.0  0.0  0.0  0.0   6.0  0.0                  0    1  130    3    0    0   11    0
+2017-19                0.0    2.0  1.0  0.0  1.0  50.0  1.0                  0    0    0    0    1    2   37    0
+2021-23               26.0    9.0  0.0  0.0  0.0   0.0  0.0                  7    0    3    0    0    0    0    0
+2020                   NaN    NaN  NaN  NaN  NaN   NaN  NaN                  0    0    1    0    0    0    0    0
+                                                   question                     status                                                                                                                                                                                                   evidence
+0               Q1 meaning of death1; change around 2014-15             Partly settled                                       décès1: 'Death at Month 1, recording if the patient passed away within the first month' (option a of Q1). No explanation of the change in completion around 2014-15.
+1                     Q2 time origin of the month-1 contact  Partly settled (implicit)  No explicit origin for décès1; month-1 to month-12 assessments are described as '... after the stroke' (e.g. barthel1 'one month after the stroke'). No statement on telephone follow-up after discharge.
+2                                 Q3 meaning of death1 = No                Not settled                                                                                           Not stated whether 'No' certifies survival through the month or may be entered when the patient was not reached.
+3                                    Q4 disposition 'death'             Partly settled                                                                                                            devenir: 'Outcome after leaving the UNV'; consistent with A1. Release date at death not stated.
+4                                    Q5 disposition 'Other'                Not settled                                                                                                                                                                                              No code list.
+5   Q6 units and codes of follow-up durations; codes 9/3/99             Partly settled                dursuiv1: 'Duration of follow-up at Month 1' without unit; observed values 1 (2010-16) and 30 (2017-19), 3 or 90 at month 3, consistent with months vs days; 0 unexplained; no value codes.
+6                        Q7 post-discharge deaths from 2015                Not settled                                        The single dictionary definition implies in-hospital deaths within month 1 should be recorded as death1 = Yes; the data show they were mostly left blank from 2015.
+7                              Q8 missing dispositions 2020                Not settled                                                                                                                                                                                                           
+8          Q9 admission Rankin; timing of laboratory values                Not settled                                                                                                                     rankin: 'Modified Rankin Scale score' without timing; laboratory items without timing.
+9                                  Q10 repeated identifiers                Not settled                                                          Code_uniq is described as a unique patient identifier, so the 38 repeated codes are entry errors or collisions; source adjudication still needed.
+10                                       Q11 date anomalies                Not settled                                                                                                                                                                                                           
+11          Q12 dates of death for 33 post-discharge deaths                Not settled                                                                                                                                                               No date-of-death variable in the dictionary.
+=== END stage 1e data dictionary audit: exit 0 in 2s
+
+=== 2026-11-03 23:47:15 START date/LOS parser reconciliation: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore scripts/date_parser_reconciliation.py G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\outputs\audit\date_los_parser_reconciliation.json
+{
+ "sheet": [
+  "Feuil1"
+ ],
+ "pandas_current": {
+  "complete_pairs": 1488,
+  "equal": 821,
+  "differ": 667,
+  "negative_in_pairs": 23,
+  "negative_all_date_pairs": 24,
+  "pandas_version": "3.1.0"
+ },
+ "pandas_pre3_emulated": {
+  "complete_pairs": 1486,
+  "equal": 821,
+  "differ": 665,
+  "negative_in_pairs": 22
+ },
+ "openpyxl_raw_cells": {
+  "complete_pairs": 1488,
+  "equal": 821,
+  "differ": 667,
+  "negative_in_pairs": 23,
+  "negative_all_date_pairs": 24,
+  "cell_types": {
+   "entry:datetime": 1639,
+   "release:datetime": 1513,
+   "release:NoneType": 140,
+   "entry:NoneType": 14
+  },
+  "number_formats": {
+   "entry:mm-dd-yy": 1653,
+   "release:mm-dd-yy": 1653
+  },
+  "rows_with_year_beyond_pandas_ns_limit": [
+   {
+    "entry_year": 2016,
+    "release_year": 2916
+   },
+   {
+    "entry_year": 3016,
+    "release_year": 2016
+   }
+  ]
+ },
+ "reconciled": true,
+ "explanation": "All date cells are Excel datetimes. pandas < 3.0 stores timestamps in nanoseconds and converts years > 2262 to NaT silently; the two rows with such years (entry 3016; release 2916) account for the earlier 1,486/665/22 figures. Both rows are flagged as invalid dates (never corrected) by the integrity rules."
+}
+=== END date/LOS parser reconciliation: exit 0 in 3s
+
+=== 2026-11-03 23:47:19 START data quality report: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore scripts/generate_data_audit.py
+wrote docs/data_quality_report.md
+=== END data quality report: exit 0 in 0s
+
+=== 2026-11-03 23:47:19 START stage 2 ascertainment/IPW/delta: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore -m stroke_repro.stage2_ascertainment
+                       variable                     labelled                   unresolved   smd             p
+0                        Age, y     59.0 [51.0-69.0] (n=980)     61.0 [52.0-71.0] (n=593) -0.13  1.174617e-02
+1                         NIHSS      10.0 [5.0-16.0] (n=576)       7.0 [4.0-12.0] (n=249)  0.48  7.218194e-09
+2            Glasgow Coma Scale     14.0 [10.0-15.0] (n=947)     15.0 [12.0-15.0] (n=470) -0.30  2.059322e-05
+3   Modified Rankin (admission)        4.0 [2.2-4.0] (n=514)        3.0 [1.0-3.0] (n=252)  0.69  9.201143e-18
+4             Systolic BP, mmHg  165.0 [141.0-189.0] (n=968)  160.0 [137.2-180.0] (n=454)  0.15  6.890784e-03
+5             Creatinine, mg/dL        1.1 [0.9-1.4] (n=808)        1.1 [0.9-1.5] (n=426) -0.03  5.094872e-01
+6                     CRP, mg/L      11.0 [4.0-48.0] (n=552)       9.8 [3.4-43.5] (n=304)  0.03  6.641291e-01
+7             Length of stay, d       6.0 [3.0-10.0] (n=979)       6.0 [4.0-10.0] (n=491) -0.02  3.800057e-01
+8                      Male sex              557/982 (56.7%)              336/596 (56.4%)  0.01  9.348644e-01
+9           Haemorrhagic stroke              407/979 (41.6%)              163/503 (32.4%)  0.19  7.287768e-04
+10                 Hypertension              683/977 (69.9%)              347/497 (69.8%)  0.00  1.000000e+00
+11                     Diabetes              207/975 (21.2%)              105/501 (21.0%)  0.01  9.567902e-01
+12          Atrial fibrillation                41/943 (4.3%)                24/486 (4.9%) -0.03  7.087968e-01
+13                 Prior stroke              144/966 (14.9%)               90/494 (18.2%) -0.09  1.195461e-01
+14                NIHSS missing              406/982 (41.3%)              348/597 (58.3%) -0.34  8.832797e-11
+15                  mRS missing              468/982 (47.7%)              345/597 (57.8%) -0.20  1.161709e-04
+16                  CRP missing              430/982 (43.8%)              293/597 (49.1%) -0.11  4.614963e-02
+17             Admitted 2010-12                  295 (30.0%)                    30 (5.0%)  0.70           NaN
+18             Admitted 2013-14                  225 (22.9%)                    46 (7.7%)  0.43           NaN
+19             Admitted 2015-16                  213 (21.7%)                    52 (8.7%)  0.37           NaN
+20             Admitted 2017-19                  147 (15.0%)                  191 (32.0%) -0.41           NaN
+21                Admitted 2020                    13 (1.3%)                  172 (28.8%) -0.83           NaN
+22             Admitted 2021-23                    89 (9.1%)                  106 (17.8%) -0.26           NaN
+23           Disposition: death                  307 (31.3%)                    19 (3.2%)   NaN           NaN
+24            Disposition: home                  595 (60.6%)                  354 (59.3%)   NaN           NaN
+25        Disposition: transfer                    20 (2.0%)                    13 (2.2%)   NaN           NaN
+26           Disposition: other                    57 (5.8%)                   91 (15.2%)   NaN           NaN
+27         Disposition: missing                     3 (0.3%)                  119 (19.9%)   NaN           NaN
+         eligible  labelled  deaths  labelled_pct  labelled_mortality_pct  inhosp_30d_deaths  known_disposition  inhosp_30d_pct_known_disp  later_contact_recorded  later_contact_pct  later_contact_no_death1  n4_alive_by_later_contact
+period                                                                                                                                                                                                                                   
+2010-12       325       295    96.0          90.8                    32.5                 82                322                       25.5                     282               86.8                        0                          0
+2013-14       271       225    78.0          83.0                    34.7                 63                263                       24.0                     191               70.5                        8                          8
+2015-16       265       213    56.0          80.4                    26.3                 55                247                       22.3                     159               60.0                       11                          9
+2017-19       338       147    67.0          43.5                    45.6                 66                308                       21.4                      55               16.3                        3                          1
+2020          185        13     8.0           7.0                    61.5                  7                 81                        8.6                       2                1.1                        1                          1
+2021-23       195        89    33.0          45.6                    37.1                 32                 71                       45.1                      16                8.2                        1                          1
+          reference  delta_odds_ratio  expected_deaths_unresolved  mortality_pct
+0         early_era              0.25                        85.8           26.8
+1         early_era              0.50                       113.1           28.6
+2         early_era              1.00                       146.0           30.7
+3         early_era              2.00                       189.2           33.4
+4         early_era              4.00                       247.2           37.1
+5         early_era              8.00                       320.2           41.7
+6   period_specific              0.25                        82.0           26.6
+7   period_specific              0.50                       105.6           28.1
+8   period_specific              1.00                       131.8           29.8
+9   period_specific              2.00                       163.3           31.8
+10  period_specific              4.00                       203.8           34.3
+11  period_specific              8.00                       255.6           37.6
+{
+ "primary": {
+  "eligible": 1579,
+  "labelled": 982,
+  "deaths": 338,
+  "unresolved": 597,
+  "labelled_mortality_pct": 34.4,
+  "labelled_mortality_ci": [
+   31.5,
+   37.4
+  ],
+  "bound_all_unresolved_alive_pct": 21.4,
+  "bound_all_unresolved_dead_pct": 59.2,
+  "inhosp_30d_deaths": 305,
+  "inhosp_denominator_known_disposition": 1292,
+  "inhosp_30d_mortality_pct": 23.6,
+  "inhosp_30d_mortality_ci": [
+   21.4,
+   26.0
+  ],
+  "later_contact_recorded": 705,
+  "later_contact_pct": 44.6,
+  "later_contact_without_death1": 24,
+  "later_alive_without_death1": 23,
+  "n4_alive_by_later_contact": 20,
+  "ipw_population": 1456,
+  "ipw_population_labelled": 979,
+  "excluded_from_ipw_no_disposition": 123,
+  "ipw_mortality_pct": 27.5,
+  "ipw_mortality_ci": [
+   25.0,
+   30.1
+  ],
+  "ipw_bootstrap_replicates": 1000,
+  "postdischarge_risk_by_period": {
+   "2010-12": "14/205",
+   "2013-14": "13/153",
+   "2015-16": "1/147",
+   "2017-19": "1/76",
+   "2020": "1/6",
+   "2021-23": "1/12"
+  },
+  "postdischarge_risk_pooled": "31/599 (5.2%)"
+ },
+ "comparison_n": {
+  "labelled": 982,
+  "unresolved": 597
+ },
+ "strict_timing": {
+  "eligible": 1579,
+  "labelled": 949,
+  "deaths": 305,
+  "unresolved": 630,
+  "labelled_mortality_pct": 32.1,
+  "labelled_mortality_ci": [
+   29.2,
+   35.2
+  ],
+  "bound_all_unresolved_alive_pct": 19.3,
+  "bound_all_unresolved_dead_pct": 59.2,
+  "inhosp_30d_deaths": 305,
+  "inhosp_denominator_known_disposition": 1292,
+  "inhosp_30d_mortality_pct": 23.6,
+  "inhosp_30d_mortality_ci": [
+   21.4,
+   26.0
+  ],
+  "later_contact_recorded": 705,
+  "later_contact_pct": 44.6,
+  "later_contact_without_death1": 24,
+  "later_alive_without_death1": 23,
+  "n4_alive_by_later_contact": 20,
+  "ipw_population": 1456,
+  "ipw_population_labelled": 946,
+  "excluded_from_ipw_no_disposition": 123,
+  "ipw_mortality_pct": 24.0,
+  "ipw_mortality_ci": [
+   21.3,
+   26.6
+  ],
+  "ipw_bootstrap_replicates": 300,
+  "postdischarge_risk_by_period": {
+   "2010-12": "0/191",
+   "2013-14": "0/140",
+   "2015-16": "0/146",
+   "2017-19": "0/75",
+   "2020": "0/5",
+   "2021-23": "0/11"
+  },
+  "postdischarge_risk_pooled": "0/568 (0.0%)"
+ }
+}
+{
+ "pi_min": 0.06411698727735805,
+ "pi_max": 0.992764506452208,
+ "pi_labelled_min": 0.1123211339232228,
+ "n_pi_lt_0_05": 0,
+ "n_labelled_pi_lt_0_10": 0,
+ "weight_cap_p99": 3.9133664937420995,
+ "weight_max_untruncated": 8.903044022717495,
+ "n_truncated": 10,
+ "weight_sum": 1376.082393533046,
+ "n_eligible": 1456,
+ "ess": 829.5492312159029,
+ "n_labelled": 979,
+ "coefficients": {
+  "age": -0.131,
+  "age_miss": -0.385,
+  "nihss": 0.091,
+  "nihss_miss": -0.494,
+  "gcs": 0.174,
+  "gcs_miss": -0.528,
+  "mrs": 0.108,
+  "mrs_miss": 0.092,
+  "sbp": 0.054,
+  "sbp_miss": -0.433,
+  "male": 0.065,
+  "male_miss": 0.0,
+  "hemorrhagic": 0.082,
+  "hemorrhagic_miss": -1.063,
+  "hypertension": -0.189,
+  "hypertension_miss": -1.089,
+  "diabetes": 0.049,
+  "diabetes_miss": -0.096,
+  "period_2013-14": -0.282,
+  "period_2015-16": -0.217,
+  "period_2017-19": -2.325,
+  "period_2020": -2.956,
+  "period_2021-23": -1.68,
+  "disp_death": 2.461,
+  "disp_transfer": -0.97,
+  "disp_other": -0.511,
+  "disp_missing": 0.0,
+  "los_gt30": -0.081
+ },
+ "pi_by_disposition": {
+  "death": [
+   0.481,
+   0.969,
+   0.993
+  ],
+  "home": [
+   0.064,
+   0.768,
+   0.93
+  ],
+  "transfer": [
+   0.089,
+   0.701,
+   0.833
+  ],
+  "other": [
+   0.094,
+   0.367,
+   0.793
+  ]
+ }
+}
+=== END stage 2 ascertainment/IPW/delta: exit 0 in 46s
+
+=== 2026-11-03 23:48:05 START stage 3 models (nested CV, temporal, sensitivity): G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore -m stroke_repro.stage3_models
+23:48:07 features ['age', 'nihss', 'gcs', 'mrs', 'sbp', 'dbp', 'heart_rate', 'resp_rate', 'temperature', 'glucose_cap', 'creatinine', 'urea', 'total_cholesterol', 'hemoglobin', 'wbc', 'platelets', 'crp', 'sodium', 'potassium', 'male', 'hypertension', 'diabetes', 'smoking', 'heart_disease', 'atrial_fib', 'prior_stroke', 'hemorrhagic'] n 982 events 338
+23:48:08 primary nested done
+23:48:14 temporal primary done
+23:48:14 sens strict_timing {'LR': 0.872, 'ClinRef': 0.847}
+23:48:14 sens observed_only {'LR': 0.868, 'ClinRef': 0.845}
+23:48:15 sens dup_keep_first {'LR': 0.858, 'ClinRef': 0.839}
+23:48:15 sens dup_exclude_conflicts {'LR': 0.854, 'ClinRef': 0.838}
+23:48:15 sens era_2010_2016 {'LR': 0.859, 'ClinRef': 0.84}
+23:48:15 sens complete_nihss {'LR': 0.885, 'ClinRef': 0.887}
+23:48:15 sens nihss_missing_indicator {'LR': 0.866}
+23:48:15 sens gcs_nihss_ratio {'LR': 0.861}
+23:48:15 sens multiple_imputation_m5 {'LR_MI': 0.864}
+23:49:13 sens missing_indicators_all {'LR': 0.869}
+23:49:13 sens low_missing_predictors {'LR': 0.834}
+23:49:13 sens no_later_contact {'LR': 0.859}
+23:49:13 sens onset_anchor_gap {'LR': 0.856}
+23:49:13 sens onset_anchor_gap_unknown_excluded {'LR': 0.855}
+23:49:13 sens ipw_weighted_fit {'LR': 0.861, 'ClinRef': 0.838}
+Background dataset has 982 samples but max_samples=100. Subsampling to 100 samples for SHAP value computation. To use all samples, set max_samples=982 when initializing the masker.
+23:53:24 stage 3 complete in 317s
+=== END stage 3 models (nested CV, temporal, sensitivity): exit 0 in 320s
+
+=== 2026-11-03 23:53:25 START stage 3b baseline/subgroups: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore -m stroke_repro.stage3b_descriptive
+             subgroup    n  deaths  auroc     lo     hi  intercept  slope
+0              Female  425     148  0.834  0.794  0.874     -0.019  1.063
+1                Male  557     190  0.884  0.856  0.913     -0.002  1.308
+2  Ischaemic or other  572     132  0.847  0.811  0.884     -0.122  1.137
+3        Haemorrhagic  407     204  0.845  0.807  0.883      0.108  1.218
+4  Admitted 2010-2016  733     230  0.861  0.832  0.889     -0.224  1.151
+5  Admitted 2017-2023  249     108  0.885  0.843  0.927      0.555  1.456
+6      NIHSS recorded  576     186  0.892  0.865  0.918     -0.107  1.442
+7       NIHSS missing  406     152  0.822  0.779  0.864      0.126  0.960
+=== END stage 3b baseline/subgroups: exit 0 in 2s
+
+=== 2026-11-03 23:53:27 START post hoc Riley sample size: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore scripts/riley_samplesize.py G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\outputs\analysis\model_results.json G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\outputs\analysis\riley_samplesize_posthoc.json
+{
+  "n_available": 982,
+  "events_available": 338,
+  "prevalence": 0.3442,
+  "candidate_parameters": 27,
+  "r2cs_max": 0.7241,
+  "scenarios": {
+    "conservative_15pct_of_max": {
+      "n_shrinkage": 2100,
+      "n_optimism": 691,
+      "n_intercept": 347,
+      "n_required": 2100,
+      "anticipated_r2cs": 0.1086,
+      "events_required": 723,
+      "met": false
+    },
+    "from_observed_auroc": {
+      "n_shrinkage": 554,
+      "n_optimism": 592,
+      "n_intercept": 347,
+      "n_required": 592,
+      "anticipated_r2cs": 0.3476,
+      "events_required": 204,
+      "met": true
+    }
+  }
+}
+=== END post hoc Riley sample size: exit 0 in 2s
+
+=== 2026-11-03 23:53:30 START observed-only summary: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore scripts/observed_only_summary.py G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\outputs\analysis\observed_only_summary.json
+{
+ "endpoint_name": "recorded month-1 vital status (death1 Yes/No only; no reconstruction; time origin per dictionary implicit)",
+ "eligible": 1579,
+ "with_recorded_status": 784,
+ "recorded_deaths": 160,
+ "mortality_among_recorded_pct": 20.4,
+ "by_period": [
+  {
+   "admission_year": "2010-12",
+   "eligible": "325",
+   "recorded_month1_status": "292",
+   "recorded_deaths": "94",
+   "recorded_pct": "89.8",
+   "mortality_among_recorded_pct": "32.2"
+  },
+  {
+   "admission_year": "2013-14",
+   "eligible": "271",
+   "recorded_month1_status": "201",
+   "recorded_deaths": "58",
+   "recorded_pct": "74.2",
+   "mortality_among_recorded_pct": "28.9"
+  },
+  {
+   "admission_year": "2015-16",
+   "eligible": "265",
+   "recorded_month1_status": "150",
+   "recorded_deaths": "3",
+   "recorded_pct": "56.6",
+   "mortality_among_recorded_pct": "2.0"
+  },
+  {
+   "admission_year": "2017-19",
+   "eligible": "338",
+   "recorded_month1_status": "78",
+   "recorded_deaths": "1",
+   "recorded_pct": "23.1",
+   "mortality_among_recorded_pct": "1.3"
+  },
+  {
+   "admission_year": "2020",
+   "eligible": "185",
+   "recorded_month1_status": "6",
+   "recorded_deaths": "2",
+   "recorded_pct": "3.2",
+   "mortality_among_recorded_pct": "33.3"
+  },
+  {
+   "admission_year": "2021-23",
+   "eligible": "195",
+   "recorded_month1_status": "57",
+   "recorded_deaths": "2",
+   "recorded_pct": "29.2",
+   "mortality_among_recorded_pct": "3.5"
+  }
+ ],
+ "model_results_key": "sensitivity_nested.observed_only and temporal_observed
+=== END observed-only summary: exit 0 in 0s
+
+=== 2026-11-03 23:53:30 START manuscript tables/figures/macros: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore scripts/generate_manuscript_tables.py
+wrote 319 macros, tables and figures
+=== END manuscript tables/figures/macros: exit 0 in 3s
+
+=== 2026-11-03 23:53:34 START latex pass 1: pdflatex -interaction=nonstopmode -jobname=main main.tex
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-09-09>
+
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/elsarticle\elsarticle
+.cls
+Document Class: elsarticle 2026/01/09, 3.5: Elsevier Ltd
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\l3backend-pd
+ftex.def))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpa
+rse.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+) (C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics
+.cfg)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.d
+ef))) (main.spl)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+) (C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-elsar
+ticle.sto)))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cf
+g)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.lt
+x))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+new hooks used!!
+)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
+)) (C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.s
+ty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.s
+ty)))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefi
+nekeys.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape
+.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcm
+ds.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr
+.sty)))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gett
+itlestring.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc
+.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintca
+lc.sty)))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunf
+ilecheck.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniqu
+ecounter.sty))) (tables/macros.tex)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd)
+(main.aux)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
+mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
+-base.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys
+.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(main.out) (main.out)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 79.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cnotenum' on input line 79.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 79.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@corref' on input line 79.
+
+[1{C:/Users/hp omen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/
+hp omen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/hp
+ omen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/
+hp omen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/User
+s/hp omen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}] [2]
+[3] (tables/recon.tex) [4] [5] [6] [7] [8 <./figures/fig_flow.png> <./figures/f
+ig_ascertainment.png>] (tables/reconbounds.tex) (tables/selbias.tex)
+(tables/baseline.tex) (tables/nestedcv.tex) [9] [10 <./figures/fig_delta.png>]
+[11 <./figures/fig_roc.png>] (tables/paireddelong.tex) (tables/temporal.tex)
+[12] (tables/tiers.tex) [13 <./figures/fig_calibration.png>] [14 <./figures/fig
+_tiers.png> <./figures/fig_dca.png>] (tables/interp.tex) [15 <./figures/fig_sha
+p.png>] (tables/sens.tex) [16] [17] [18] (main.bbl [19]) [20]
+(tables/period.tex) (tables/delta.tex) (tables/dupfields.tex)
+(tables/auditrecon.tex) (tables/lostab.tex) (tables/transitions.tex)
+(tables/missing.tex) (tables/tempshift.tex) (tables/recal.tex)
+(tables/subgroups.tex) [21] [22] [23] (tables/origvsrev.tex) [24] (main.aux) )<
+C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb
+><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.p
+fb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.
+pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9
+.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr1
+0.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
+12.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r5.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r6.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r7.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r8.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r9.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+ri10.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmri7.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmri8.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmss8.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmsy10.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/lm/lmsy5.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmsy6.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmsy7.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/lm/lmsy9.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmtt10.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmtt8.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmtt9.pfb>
+Output written on main.pdf (24 pages, 1504770 bytes).
+Transcript written on main.log.
+=== END latex pass 1: exit 0 in 2s
+
+=== 2026-11-03 23:53:36 START latex pass 2: bibtex main
+This is BibTeX, Version 0.99e (MiKTeX 26.5)
+The top-level auxiliary file: main.aux
+The style file: elsarticle-num.bst
+Database file #1: stroke_bib.bib
+=== END latex pass 2: exit 0 in 0s
+
+=== 2026-11-03 23:53:36 START latex pass 3: pdflatex -interaction=nonstopmode -jobname=main main.tex
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-09-09>
+
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/elsarticle\elsarticle
+.cls
+Document Class: elsarticle 2026/01/09, 3.5: Elsevier Ltd
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\l3backend-pd
+ftex.def))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpa
+rse.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+) (C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics
+.cfg)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.d
+ef))) (main.spl)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+) (C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-elsar
+ticle.sto)))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cf
+g)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.lt
+x))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+new hooks used!!
+)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
+)) (C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.s
+ty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.s
+ty)))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefi
+nekeys.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape
+.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcm
+ds.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr
+.sty)))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gett
+itlestring.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc
+.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintca
+lc.sty)))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunf
+ilecheck.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniqu
+ecounter.sty))) (tables/macros.tex)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd)
+(main.aux)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
+mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
+-base.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys
+.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(main.out) (main.out)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 79.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cnotenum' on input line 79.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 79.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@corref' on input line 79.
+
+[1{C:/Users/hp omen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/
+hp omen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/hp
+ omen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/
+hp omen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/User
+s/hp omen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}] [2]
+[3] (tables/recon.tex) [4] [5] [6] [7] [8 <./figures/fig_flow.png> <./figures/f
+ig_ascertainment.png>] (tables/reconbounds.tex) (tables/selbias.tex)
+(tables/baseline.tex) (tables/nestedcv.tex) [9] [10 <./figures/fig_delta.png>]
+[11 <./figures/fig_roc.png>] (tables/paireddelong.tex) (tables/temporal.tex)
+[12] (tables/tiers.tex) [13 <./figures/fig_calibration.png>] [14 <./figures/fig
+_tiers.png> <./figures/fig_dca.png>] (tables/interp.tex) [15 <./figures/fig_sha
+p.png>] (tables/sens.tex) [16] [17] [18] (main.bbl [19]) [20]
+(tables/period.tex) (tables/delta.tex) (tables/dupfields.tex)
+(tables/auditrecon.tex) (tables/lostab.tex) (tables/transitions.tex)
+(tables/missing.tex) (tables/tempshift.tex) (tables/recal.tex)
+(tables/subgroups.tex) [21] [22] [23] (tables/origvsrev.tex) [24] (main.aux) )<
+C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb
+><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.p
+fb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.
+pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9
+.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr1
+0.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
+12.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r5.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r6.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r7.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r8.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r9.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+ri10.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmri7.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmri8.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmss8.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmsy10.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/lm/lmsy5.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmsy6.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmsy7.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/lm/lmsy9.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmtt10.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmtt8.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmtt9.pfb>
+Output written on main.pdf (24 pages, 1504770 bytes).
+Transcript written on main.log.
+=== END latex pass 3: exit 0 in 2s
+
+=== 2026-11-03 23:53:38 START latex pass 4: pdflatex -interaction=nonstopmode -jobname=main main.tex
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-09-09>
+
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/elsarticle\elsarticle
+.cls
+Document Class: elsarticle 2026/01/09, 3.5: Elsevier Ltd
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\l3backend-pd
+ftex.def))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpa
+rse.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+) (C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics
+.cfg)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.d
+ef))) (main.spl)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+) (C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-elsar
+ticle.sto)))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cf
+g)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.lt
+x))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+new hooks used!!
+)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
+)) (C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.s
+ty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.s
+ty)))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefi
+nekeys.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape
+.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcm
+ds.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr
+.sty)))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gett
+itlestring.sty))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc
+.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintca
+lc.sty)))
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunf
+ilecheck.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniqu
+ecounter.sty))) (tables/macros.tex)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd)
+(main.aux)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
+mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
+-base.sty
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys
+.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(main.out) (main.out)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
+(C:\Users\hp omen\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 79.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cnotenum' on input line 79.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 79.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@corref' on input line 79.
+
+[1{C:/Users/hp omen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/
+hp omen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/hp
+ omen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/
+hp omen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/User
+s/hp omen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}] [2]
+[3] (tables/recon.tex) [4] [5] [6] [7] [8 <./figures/fig_flow.png> <./figures/f
+ig_ascertainment.png>] (tables/reconbounds.tex) (tables/selbias.tex)
+(tables/baseline.tex) (tables/nestedcv.tex) [9] [10 <./figures/fig_delta.png>]
+[11 <./figures/fig_roc.png>] (tables/paireddelong.tex) (tables/temporal.tex)
+[12] (tables/tiers.tex) [13 <./figures/fig_calibration.png>] [14 <./figures/fig
+_tiers.png> <./figures/fig_dca.png>] (tables/interp.tex) [15 <./figures/fig_sha
+p.png>] (tables/sens.tex) [16] [17] [18] (main.bbl [19]) [20]
+(tables/period.tex) (tables/delta.tex) (tables/dupfields.tex)
+(tables/auditrecon.tex) (tables/lostab.tex) (tables/transitions.tex)
+(tables/missing.tex) (tables/tempshift.tex) (tables/recal.tex)
+(tables/subgroups.tex) [21] [22] [23] (tables/origvsrev.tex) [24] (main.aux) )<
+C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb
+><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.p
+fb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.
+pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9
+.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr1
+0.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
+12.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r5.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r6.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r7.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r8.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r9.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+ri10.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmri7.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmri8.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmss8.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmsy10.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/lm/lmsy5.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmsy6.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmsy7.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/lm/lmsy9.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmtt10.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmtt8.pfb><C:/Users/hp omen/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmtt9.pfb>
+Output written on main.pdf (24 pages, 1504770 bytes).
+Transcript written on main.log.
+=== END latex pass 4: exit 0 in 2s
+
+=== 2026-11-03 23:53:40 START response letter: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore -m stroke_repro.stage5_response_letter G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\manuscript\main.aux G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\outputs\reports\response_to_reviewers_NEURI-D-26-00184.docx
+wrote G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\outputs\reports\response_to_reviewers_NEURI-D-26-00184.docx
+=== END response letter: exit 0 in 2s
+
+=== 2026-11-03 23:53:42 START TRIPOD+AI / RECORD reporting map: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore scripts/tripod_map.py G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\manuscript\main.aux G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\docs\TRIPOD_AI_reporting_map.md
+wrote G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\docs\TRIPOD_AI_reporting_map.md
+=== END TRIPOD+AI / RECORD reporting map: exit 0 in 0s
+
+=== 2026-11-03 23:53:42 START field availability: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore scripts/field_availability.py G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\outputs\audit\field_availability_for_new_questions.csv
+                               field  n_nonmissing_excl_codes_9_99  pct_all_rows  pct_2010_16  pct_2017_23
+0                     Cause of death                           292          17.7         16.9         19.0
+1   Complication per hospitalization                           582          35.2         37.6         32.7
+2           Become after leaving UNV                          1514          91.6         99.6         83.3
+3          Length of hospitalization                          1431          86.6         92.5         80.6
+4                       Rankin at M1                           653          39.5         61.3         13.6
+5                      Barthel at M1                           595          36.0         59.6          7.8
+6                       Rankin at M3                           559          33.8         55.9          7.5
+7                      Barthel at M3                           533          32.2         55.7          4.3
+8                             death3                           720          43.6         72.4          9.3
+9                       Rankin at M6                           297          18.0         30.2          3.5
+10                     Rankin at M12                           445          26.9         48.7          0.9
+11           stroke recurrence at m3                           528          31.9         50.8          9.6
+12   illness-consultation start time                          1154          69.8         87.7         49.1
+13                  HGD arrival time                          1193          72.2         88.5         53.4
+14                          delay4.5                          1388          84.0         99.8         66.2
+15        Time to obtain the scanner                           864          52.3         78.2         21.6
+16                  Brain CT results                          1468          88.8         97.2         79.9
+17               OCSP Classification                           450          27.2         40.1         11.9
+18                    Monthly income                           669          40.5         55.2         23.3
+19                place of residence                          1533          92.7         99.0         86.7
+20                means of transport                          1354          81.9         93.9         68.9
+21                   type of support                          1474          89.2         99.4         78.0
+22                 educational level                           652          39.4         58.5         17.1
+23         Complication on admission                          1493          90.3         97.7         82.7
+24                       NIHSS score                           847          51.2         53.6         49.2
+25                      glagow score                          1422          86.0         93.0         78.8
+=== END field availability: exit 0 in 2s
+
+=== 2026-11-03 23:53:44 START verification (99 checks): G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore scripts/verify.py
+                                                                                                            check  passed                                                                                                                                                                                                                                                                                                                                                                detail
+0                                                                                           raw workbook checksum    True                                                                                                                                                                                                                                                                                                                                      08541ef199c1656c184291f24b4cc3e3
+1                                                                 all 1,653 source rows preserved with unique ids    True                                                                                                                                                                                                                                                                                                                                                                  1653
+2                                                                      [primary] eligible = labelled + unresolved    True                                                                                                                                                                                                                                                                                                                                                                      
+3                                                                          [primary] class counts sum to eligible    True                                                                                                                                                                                                                                                                                                                                                                      
+4                                                                                 [primary] exclusions arithmetic    True                                                                                                                                                                                                                                                                                                                                                                      
+5                                                                [strict_timing] eligible = labelled + unresolved    True                                                                                                                                                                                                                                                                                                                                                                      
+6                                                                    [strict_timing] class counts sum to eligible    True                                                                                                                                                                                                                                                                                                                                                                      
+7                                                                           [strict_timing] exclusions arithmetic    True                                                                                                                                                                                                                                                                                                                                                                      
+8                                                               [dup_keep_first] eligible = labelled + unresolved    True                                                                                                                                                                                                                                                                                                                                                                      
+9                                                                   [dup_keep_first] class counts sum to eligible    True                                                                                                                                                                                                                                                                                                                                                                      
+10                                                                         [dup_keep_first] exclusions arithmetic    True                                                                                                                                                                                                                                                                                                                                                                      
+11                                                       [dup_exclude_conflicts] eligible = labelled + unresolved    True                                                                                                                                                                                                                                                                                                                                                                      
+12                                                           [dup_exclude_conflicts] class counts sum to eligible    True                                                                                                                                                                                                                                                                                                                                                                      
+13                                                                  [dup_exclude_conflicts] exclusions arithmetic    True                                                                                                                                                                                                                                                                                                                                                                      
+14                                                                    no source row used by two analytic patients    True                                                                                                                                                                                                                                                                                                                                                                      
+15                                                                   every analytic patient traces to source rows    True                                                                                                                                                                                                                                                                                                                                                                      
+16                                                             labels only where evidence class is not unresolved    True                                                                                                                                                                                                                                                                                                                                                                      
+17                                                  submitted reconstruction counts reproduced (803/218/594, 345)    True  {'after_dedup': 1615, 'observed': 803, 'inferred': 218, 'unlabelled': 594, 'labelled': 1021, 'deaths': 345, 'mortality_pct': 33.8, 'observed_only_deaths': 162, 'class_counts': {'observed_death1': 803, 'unlabelled': 594, 'inferred_inhosp_death_le30': 183, 'inferred_later_followup_alive': 23, 'inferred_long_stay_alive': 6, 'inferred_inhosp_death_gt30': 6}}
+18                                                                     38 duplicate groups logged with a decision    True                                                                                                                                                                                                                                       {'D2_same_encounter_compatible': 26, 'D3_same_encounter_outcome_conflict': 7, 'D1_identifier_collision': 4, 'D0_non_record': 1}
+19                                                              public duplicate log contains no identifier codes    True                                                                                                                                                                                                                                                                                                                                                                      
+20                                                                    no post-admission variable among predictors    True                                         ['age', 'nihss', 'gcs', 'mrs', 'sbp', 'dbp', 'heart_rate', 'resp_rate', 'temperature', 'glucose_cap', 'creatinine', 'urea', 'total_cholesterol', 'hemoglobin', 'wbc', 'platelets', 'crp', 'sodium', 'potassium', 'male', 'hypertension', 'diabetes', 'smoking', 'heart_disease', 'atrial_fib', 'prior_stroke', 'hemorrhagic']
+21                                                                   imputer and scaler inside the tuned pipeline    True                                                                                                                                                                                                                                                                                                                                                                      
+22                                                               temporal: all training admissions before cut-off    True                                                                                                                                                                                                                                                                                                                                                                      
+23                                                                 temporal: all test admissions on/after cut-off    True                                                                                                                                                                                                                                                                                                                                                                      
+24                                                                              temporal: train and test disjoint    True                                                                                                                                                                                                                                                                                                                                                                      
+25                           temporal cut-off = 70th percentile of eligible admission dates (outcome-independent)    True                                                                                                                                                                                                                                                                                                                                                                      
+26                          recalibration fitted in-fold only (CalibratedClassifierCV inside outer training fold)    True                                                                                                                                                                                                                                                                                                                                                                      
+27                                                                 manuscript statement: 62% of eligible labelled    True                                                                                                                                                                                                                                                                                                                                                                      
+28                                          manuscript statement: labelled mortality 46% (2017-19) and 62% (2020)    True                                                                                                                                                                                                                                                                                                                                                                      
+29                                                                      manuscript statement: labelled 44% and 7%    True                                                                                                                                                                                                                                                                                                                                                                      
+30                                                manuscript statement: labelled 91% in 2010-12; 7-46% in 2017-23    True                                                                                                                                                                                                                                                                                                                                                                      
+31                                        manuscript statement: 217 of 219 causes of death with disposition death    True                                                                                                                                                                                                                                                                                                                                                                      
+32                                                                       manuscript statement: 14 misaligned rows    True                                                                                                                                                                                                                                                                                                                                                                      
+33                                                                  manuscript statement: 22 release before entry    True                                                                                                                                                                                                                                                                                                                                                                      
+34                                                             manuscript statement: duplicate decisions 1/4/26/7    True                                                                                                                                                                                                                                                                                                                                                                      
+35                                         manuscript statement: median 18 conflicting fields per duplicate group    True                                                                                                                                                                                                                                                                                                                                                                      
+36                                                 manuscript statement: NIHSS 41% and mRS 48% missing (labelled)    True                                                                                                                                                                                                                                                                                                                                                                      
+37                                            manuscript statement: SpO2 69% missing; BMI 89% missing in registry    True                                                                                                                                                                                                                                                                                                                                                                      
+38                                               manuscript statement: resp 37%, CRP 44%, cholesterol 46% missing    True                                                                                                                                                                                                                                                                                                                                                                      
+39                                                       manuscript statement: imputer converged in 11 iterations    True                                                                                                                                                                                                                                                                                                                                                                      
+40                                                    manuscript statement: 20% of unresolved without disposition    True                                                                                                                                                                                                                                                                                                                                                                      
+41                                                         manuscript statement: NIHSS median 10 vs 7; mRS 4 vs 3    True                                                                                                                                                                                                                                                                                                                                                                      
+42                                     manuscript statement: haemorrhagic 41.6% vs 32.4%; NIHSS missing 41 vs 58%    True                                                                                                                                                                                                                                                                                                                                                                      
+43  manuscript statement: temporal tree ensembles: manuscript range generated from outputs (TEnsLo/TEnsHi macros)    True                                                                                                                                                                                                                                                                                                                                                                      
+44                                             manuscript statement: month-1 recorded ~90% early, 3-61% from 2015    True                                                                                                                                                                                                                                                                                                                                                                      
+45                                                      manuscript statement: follow-up duration coded 1 / 30 / 0    True                                                                                                                                                                                                                                                                                                                                                                      
+46                                              manuscript statement: matching labelled mortality needs delta 2-4    True                                                                                                                                                                                                                                                                                                                                                                      
+47                                                               manuscript statement: 38% of eligible unresolved    True                                                                                                                                                                                                                                                                                                                                                                      
+48                                                                          manuscript statement: 24 TIA excluded    True                                                                                                                                                                                                                                                                                                                                                                      
+49                                                            manuscript statement: 33 post-discharge events (A2)    True                                                                                                                                                                                                                                                                                                                                                                      
+50                                               manuscript statement: fold count used in text (macro) consistent    True                                                                                                                                                                                                                                                                                                                                                                      
+51                                      manuscript statement: temporal difference compatible with gain up to 0.07    True                                                                                                                                                                                                                                                                                                                                                                      
+52          manuscript statement: in-hospital death median stay 4 d; 1 death and 11 home discharges at days 28-32    True                                                                                                                                                                                                                                                                                                                                                                      
+53                                        manuscript statement: 37/38 groups any difference; 35/38 timing/outcome    True                                                                                                                                                                                                                                                                                                                                                                      
+54                                                 manuscript statement: tracker counts 23 / 174 / 175 reproduced    True                                                                                                                                                                                                                                                                                                                                                                      
+55                                      manuscript statement: 28 groups = timing/outcome both-present differences    True                                                                                                                                                                                                                                                                                                                                                                      
+56                                                       manuscript statement: implausible dates rows 767/773/808    True                                                                                                                                                                                                                                                                                                                                                                      
+57                                            manuscript statement: 22 release-before-entry within registry years    True                                                                                                                                                                                                                                                                                                                                                                      
+58                                                    manuscript statement: date-derived stays >120 d (9 records)    True                                                                                                                                                                                                                                                                                                                                                                      
+59                                                    manuscript statement: A-4: 20 non-events from later contact    True                                                                                                                                                                                                                                                                                                                                                                      
+60                                           manuscript statement: later contacts 87% in 2010-12, <=16% from 2017    True                                                                                                                                                                                                                                                                                                                                                                      
+61                                                             manuscript statement: N4 = 20 later-contact labels    True                                                                                                                                                                                                                                                                                                                                                                      
+62                                                                  manuscript statement: 27 candidate predictors    True                                                                                                                                                                                                                                                                                                                                                                      
+63                                          manuscript statement: MI m=5 sensitivity present with between-draw SD    True                                                                                                                                                                                                                                                                                                                                                                      
+64                    manuscript statement: missing-indicator set includes CRP, urea, cholesterol, resp rate, mRS    True                                                                                                                                                                                                                                                                                                                                                                      
+65                                                          manuscript statement: A-7 tier effort figures present    True                                                                                                                                                                                                                                                                                                                                                                      
+66                                                           manuscript statement: no coloured hyperlinks (print)    True                                                                                                                                                                                                                                                                                                                                                                      
+67                                                          manuscript statement: Discussion has >= 2 subsections    True                                                                                                                                                                                                                                                                                                                                                                      
+68                                                                                               LaTeX: no errors    True                                                                                                                                                                                                                                                                                                                                                                      
+69                                                                       LaTeX: no undefined references/citations    True                                                                                                                                                                                                                                                                                                                                                                      
+70                                                                             PDF: no unresolved '??' references    True                                                                                                                                                                                                                                                                                                                                                                      
+71                                                                                 PDF: no bracketed placeholders    True                                                                                                                                                                                                                                                                                                                                                                      
+72                                                                                                 PDF page count    True                                                                                                                                                                                                                                                                                                                                                                    24
+73                                                                                  BibTeX: no warnings or errors    True                                                                                                                                               le$ -- 1\npurify$ -- 0\nquote$ -- 0\nskip$ -- 578\nstack$ -- 0\nsubstring$ -- 610\nswap$ -- 92\ntext.length$ -- 1\ntext.prefix$ -- 0\ntop$ -- 0\ntype$ -- 0\nwarning$ -- 0\nwhile$ -- 72\nwidth$ -- 30\nwrite$ -- 283\n
+74                                                                      journal: structured abstract <= 250 words    True                                                                                                                                                                                                                                                                                                                                                                   249
+75                                                                                          journal: 1-7 keywords    True                                                                                                                                                                                                                                                                                                                                                                     7
+76                                                                     journal: generative-AI declaration present    True                                                                                                                                                                                                                                                                                                                                                                      
+77                                                                 journal: 3-5 highlights, each <= 85 characters    True                                                                                                                                                                                                                                                                                                                                                  [81, 84, 71, 74, 78]
+78                                                              citations: off-topic or mis-keyed sources removed    True                                                                                                                                                                                                                                                                                                                                                                      
+79                                                     citations: iScore/PLAN cited to original derivation papers    True                                                                                                                                                                                                                                                                                                                                                                      
+80                                                                             citations: RECORD and STROBE cited    True                                                                                                                                                                                                                                                                                                                                                                      
+81                                                         citations: Nkoke figures match source (15% readmitted)    True                                                                                                                                                                                                                                                                                                                                                                      
+82                                    manuscript statement: post hoc Riley criteria met only under AUROC-based R2    True                                                                                                                                                                                                                                                                                                                                                                      
+83                                manuscript statement: four imputation sensitivity analyses (consistent wording)    True                                                                                                                                                                                                                                                                                                                                                                      
+84                       manuscript: observed-only mortality comes from the generated macro (no hard-coded 20.2%)    True                                                                                                                                                                                                                                                                                                                                                                      
+85                                                            dictionary checksum is one of the recorded versions    True                                                                                                                                                                                                                                                                                                                                          stroke_data_dictionnary.xlsx
+86                                                 manuscript quotes the dictionary definition of death1 verbatim    True                                                                                                                                                                                                                                                                                                                                                                      
+87                                                    dictionary: follow-up items described as 'after the stroke'    True                                                                                                                                                                                                                                                                                                                                                                      
+88                                                           dictionary: no value codes (statement in manuscript)    True                                                                                                                                                                                                                                                                                                                                                                      
+89                                                                          dictionary: no date-of-death variable    True                                                                                                                                                                                                                                                                                                                                                                      
+90                                                    dursuiv1 = 1 in 2010-16 and 30 in 2017-19 (dominant values)    True                                                                                                                                                                                                                                                                                                                                                                      
+91                                                                    onset-anchored sensitivity analyses present    True                                                                                                                                                                                                                                                                                                                                                                      
+92                              A1: 217 of 219 recorded causes belong to in-hospital deaths (unchanged statement)    True                                                                                                                                                                                                                                                                                                                                                                      
+93                                                                                        letter: no placeholders    True                                                                                                                                                                                                                                                                                                                                                                      
+94                     letter: residual endpoint uncertainty stated (no dates of death; time origin not explicit)    True                                                                                                                                                                                                                                                                                                                                                                      
+95                                                                 letter: dictionary definition of death1 quoted    True                                                                                                                                                                                                                                                                                                                                                                      
+96                                                                          letter: all 19 tracker items answered    True                                                                                                                                                                                                                                                                                                                                                                      
+97                                                                         letter: verbatim reviewer text present    True                                                                                                                                                                                                                                                                                                                                                                      
+98                                                                                letter: every page cited exists    True                                                                                                                                                                                                                                                                                                                                                                    45
+
+99/99 checks passed
+=== END verification (99 checks): exit 0 in 2s
+
+=== 2026-11-03 23:53:46 START execution tracker: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore scripts/build_tracker.py G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\docs\tracker_original.xlsx G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\outputs\reports\Stroke_Registry_Revision_Execution_Tracker_updated.xlsx
+saved G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\outputs\reports\Stroke_Registry_Revision_Execution_Tracker_updated.xlsx
+=== END execution tracker: exit 0 in 1s
+
+=== 2026-11-03 23:53:47 START ticket self-check: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore scripts/ticket_self_check.py
+ticket self-check: 55 pass / 0 fail / 5 human / 0 unchecked; letter: True
+=== END ticket self-check: exit 0 in 0s
+
+=== 2026-11-03 23:53:47 START aggregate-only output check: G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_FINAL_VERIFIED\stroke_venv_1\Scripts\python.exe -W ignore scripts/privacy_check.py G:\ALL\stroke_DGH\stroke_reproducibility_rebuilt_v3\stroke_reproducibility_rebuilt\outputs
+privacy check: PASS
+=== END aggregate-only output check: exit 0 in 0s

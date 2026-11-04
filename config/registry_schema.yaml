@@ -1,0 +1,89 @@
+source:
+  workbook_env_var: STROKE_DATA_PATH
+  expected_md5: 08541ef199c1656c184291f24b4cc3e3
+  worksheet: Feuil1
+  expected_rows: 1653
+  expected_columns: 251
+  dictionary_env_var: STROKE_DICT_PATH
+  dictionary_expected_md5: be778aa084720376bdc1c27392a260af
+  dictionary_csv_encoding: cp1252
+  dictionary_csv_delimiter: ;
+identifier:
+  column: unique_code
+  documented_meaning: per-patient identifier (initials + admission date); repeat admissions cannot be linked
+  repeated_groups_observed: 38
+date_fields:
+  entry: Date of entry
+  release: Release date
+  cell_type_expected: Excel datetime
+  number_format_observed: mm-dd-yy
+  valid_entry_years:
+  - 2010
+  - 2023
+  valid_release_years:
+  - 2010
+  - 2024
+  parser_note: 'pandas < 3.0 converts years > 2262 to NaT silently (two rows: entry 3016, release 2916); pandas >= 3.0 required or the year guard applies'
+los_field:
+  column: Length of hospitalization
+  unit_assumed: days (recorded; inclusive/elapsed convention mixed)
+  missing_code: 99
+  max_plausible_days: 120
+  rule: date-derived elapsed days when both dates valid and 0-120 d, else recorded LOS; opposite sides of day 30 without month-1 status => unresolved
+outcome_fields:
+- death1
+- death3
+- death6
+- death9
+- duration followed1
+- duration followed3
+- duration followed6
+- duration followed9
+- Become after leaving UNV
+- Cause of death
+undocumented_codes:
+  death1:
+  - '9'
+  death3:
+  - '3'
+  - '9'
+  Length of hospitalization:
+  - 99
+  Cause of death:
+  - '0'
+  - '9'
+  - '99'
+  Become after leaving UNV:
+  - Other
+  - '6'
+admission_predictor_columns:
+  NIHSS score: nihss
+  glagow score: gcs
+  Modified Rankin score: mrs
+  Systolic BP: sbp
+  Diastolic BP: dbp
+  cardiac frequency: heart_rate
+  respiratory rate: resp_rate
+  temperature: temperature
+  SA O2: spo2
+  Body mass index: bmi
+  capillary blood sugar: glucose_cap
+  HISTORY of hypertension: hypertension
+  Diabetes ATCD: diabetes
+  Smoking: smoking
+  ATCD of heart disease: heart_disease
+  ATCD of atrial fibrillation: atrial_fib
+  Stroke ATCD: prior_stroke
+  Ischemik stroke on scanner: ct_isch
+  Stroke Hemorrhagic: ct_hem
+  creatinine: creatinine
+  uremia: urea
+  Total cholesterol: total_cholesterol
+  Tx Hb: hemoglobin
+  GB blood: wbc
+  Blood platelets: platelets
+  CRP: crp
+  Na+: sodium
+  K+: potassium
+  age: age
+  sex: male

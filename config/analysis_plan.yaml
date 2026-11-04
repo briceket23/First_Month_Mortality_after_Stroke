@@ -1,0 +1,28 @@
+questions:
+- 'Q1 ascertainment: how was first-month death recorded over 2010-2023 and what can be said about registry-wide mortality?'
+- 'Q2 prediction: how well do admission data discriminate first-month death among labelled patients, and which conclusions survive selective recording?'
+estimands:
+  ascertainment: registry-wide 30-day mortality (bounds; IPW; delta-adjusted)
+  prediction: risk of death within 30 d of admission given admission data
+comparison: paired DeLong difference with 95% CI (pooled OOF and temporal test)
+sensitivity_analyses:
+- strict_timing
+- observed_only
+- dup_keep_first
+- dup_exclude_conflicts
+- era_2010_2016
+- complete_nihss
+- nihss_missing_indicator
+- gcs_nihss_ratio
+- multiple_imputation_m5
+- ipw_weighted_fit
+- missing_indicators_all
+- low_missing_predictors
+- no_later_contact
+- onset_anchor_gap
+- onset_anchor_gap_unknown_excluded
+survival_analysis: not feasible (no event/censoring dates; follow-up durations nominal) - see docs/survival_feasibility.md
+reporting_guidelines:
+- TRIPOD+AI (prediction model)
+- RECORD / STROBE (registry component)
+pre_specification: docs/statistical_analysis_plan.md (protocol v1.3) fixed before the final run; post hoc items labelled (Riley sample size)

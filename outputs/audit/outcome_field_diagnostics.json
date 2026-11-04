@@ -1,0 +1,140 @@
+{
+  "death_field_counts": {
+    "death1": {
+      "missing": 832,
+      "No": 658,
+      "Yes": 162,
+      "invalid": 1
+    },
+    "death3": {
+      "missing": 932,
+      "No": 553,
+      "Yes": 165,
+      "invalid": 3
+    },
+    "death6": {
+      "missing": 1202,
+      "No": 285,
+      "Yes": 166
+    },
+    "death9": {
+      "missing": 1243,
+      "No": 242,
+      "Yes": 168
+    }
+  },
+  "disposition_counts": {
+    "home": 988,
+    "death": 333,
+    "other": 159,
+    "missing": 139,
+    "transfer": 33,
+    "invalid": 1
+  },
+  "disposition_x_death1": {
+    "No": {
+      "death": 7,
+      "home": 576,
+      "invalid": 0,
+      "missing": 3,
+      "other": 59,
+      "transfer": 13
+    },
+    "Yes": {
+      "death": 128,
+      "home": 26,
+      "invalid": 0,
+      "missing": 0,
+      "other": 1,
+      "transfer": 7
+    },
+    "invalid": {
+      "death": 0,
+      "home": 1,
+      "invalid": 0,
+      "missing": 0,
+      "other": 0,
+      "transfer": 0
+    },
+    "missing": {
+      "death": 198,
+      "home": 385,
+      "invalid": 1,
+      "missing": 136,
+      "other": 99,
+      "transfer": 13
+    }
+  },
+  "monotonicity": {
+    "death1_yes_death3_no": 1,
+    "death3_yes_death6_no": 0,
+    "death6_yes_death9_no": 0,
+    "death1_no_death3_yes": 11
+  },
+  "duration_followed_values": {
+    "1": {
+      "0.0": 27,
+      "1.0": 488,
+      "7.0": 1,
+      "10.0": 1,
+      "14.0": 1,
+      "30.0": 58,
+      "90.0": 1
+    },
+    "3": {
+      "0.0": 9,
+      "1.0": 149,
+      "3.0": 441,
+      "60.0": 3,
+      "85.0": 1,
+      "86.0": 2,
+      "90.0": 50,
+      "99.0": 1
+    },
+    "6": {
+      "0.0": 5,
+      "1.0": 149,
+      "3.0": 7,
+      "6.0": 247,
+      "9.0": 1,
+      "90.0": 1,
+      "180.0": 26
+    },
+    "9": {
+      "0.0": 3,
+      "1.0": 148,
+      "3.0": 7,
+      "6.0": 10,
+      "9.0": 211,
+      "270.0": 15
+    }
+  },
+  "inhosp_death_by_death1": {
+    "death1_yes": {
+      "n": 128,
+      "stay_median": 3.5,
+      "stay_gt30": 1,
+      "stay_missing": 0
+    },
+    "death1_no": {
+      "n": 7,
+      "stay_median": 5.0,
+      "stay_gt30": 0,
+      "stay_missing": 0
+    },
+    "death1_missing": {
+      "n": 198,
+      "stay_median": 4.0,
+      "stay_gt30": 4,
+      "stay_missing": 2
+    }
+  },
+  "cause_of_death_recorded_by_disposition": {
+    "death": 217,
+    "home": 1,
+    "invalid": 0,
+    "missing": 0,
+    "other": 1,
+    "transfer": 0
+  }
+}

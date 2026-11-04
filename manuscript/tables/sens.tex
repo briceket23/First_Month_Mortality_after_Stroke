@@ -1,0 +1,24 @@
+\begin{table}[htbp]\centering\scriptsize
+\caption{Sensitivity analyses (nested CV, 5 outer folds $\times$ 2 repeats). IPW row: weighted AUROC without DeLong interval. Multiple imputation: penalty fixed at $C=0.03$; between-draw SD of fold AUROC 0.010.}\label{tab:sens}
+\begin{tabular}{>{\raggedright\arraybackslash}p{4.6cm}r>{\raggedright\arraybackslash}p{3.0cm}rrr}
+\toprule
+Analysis & $n$/deaths & AUROC primary (95\% CI) & AUROC reference & Slope & Intercept \\
+\midrule
+Strict admission-timed endpoint & 949/305 & 0.872 (0.848--0.895) & 0.847 & 1.20 & 0.00 \\
+Observed-only \texttt{death1} & 784/160 & 0.868 (0.837--0.900) & 0.845 & 1.76 & -0.02 \\
+Duplicates: keep first row & 982/340 & 0.858 (0.833--0.882) & 0.839 & 1.17 & 0.01 \\
+Duplicates: exclude conflicting groups & 979/337 & 0.854 (0.829--0.878) & 0.838 & 1.22 & 0.01 \\
+Admissions 2010--2016 only & 733/230 & 0.859 (0.831--0.888) & 0.840 & 1.71 & 0.00 \\
+Complete NIHSS only & 576/186 & 0.885 (0.857--0.913) & 0.887 & 1.81 & 0.02 \\
+Later-contact survival (N4) treated as unresolved & 962/338 & 0.859 (0.834--0.883) & -- & 1.14 & 0.01 \\
+Stroke-anchored month 1: \texttt{death1} = No with onset-to-arrival delay $>$72 h unresolved & 873/338 & 0.856 (0.831--0.881) & -- & 1.22 & 0.00 \\
+As above, and \texttt{death1} = No with unknown delay unresolved & 806/338 & 0.855 (0.829--0.881) & -- & 1.22 & 0.01 \\
+NIHSS missingness indicator added & 982/338 & 0.866 (0.843--0.889) & -- & 1.24 & 0.00 \\
+Missingness indicators for all predictors $>$20\% missing & 982/338 & 0.869 (0.845--0.892) & -- & 1.31 & 0.00 \\
+Predictors $<$10\% missing only & 982/338 & 0.834 (0.808--0.861) & -- & 1.27 & 0.00 \\
+Glasgow-to-NIHSS ratio added & 982/338 & 0.861 (0.837--0.885) & -- & 1.10 & -0.01 \\
+Multiple imputation, $m=5$ posterior draws & 982/338 & 0.864 (0.840--0.887) & -- & 1.23 & 0.00 \\
+IPW-weighted fitting and evaluation & 982/338 & 0.861 (0.837--0.885) & 0.838 & 1.23 & 0.27 \\
+\bottomrule
+\end{tabular}
+\end{table}

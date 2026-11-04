@@ -1,0 +1,372 @@
+{
+  "primary": {
+    "eligible": 1579,
+    "labelled": 982,
+    "deaths": 338,
+    "unresolved": 597,
+    "labelled_mortality_pct": 34.4,
+    "labelled_mortality_ci": [
+      31.5,
+      37.4
+    ],
+    "bound_all_unresolved_alive_pct": 21.4,
+    "bound_all_unresolved_dead_pct": 59.2,
+    "inhosp_30d_deaths": 305,
+    "inhosp_denominator_known_disposition": 1292,
+    "inhosp_30d_mortality_pct": 23.6,
+    "inhosp_30d_mortality_ci": [
+      21.4,
+      26.0
+    ],
+    "later_contact_recorded": 705,
+    "later_contact_pct": 44.6,
+    "later_contact_without_death1": 24,
+    "later_alive_without_death1": 23,
+    "n4_alive_by_later_contact": 20,
+    "ipw_population": 1456,
+    "ipw_population_labelled": 979,
+    "excluded_from_ipw_no_disposition": 123,
+    "ipw_mortality_pct": 27.5,
+    "ipw_mortality_ci": [
+      25.0,
+      30.1
+    ],
+    "ipw_bootstrap_replicates": 1000,
+    "ipw_diagnostics": {
+      "pi_min": 0.06411698727735805,
+      "pi_max": 0.992764506452208,
+      "pi_labelled_min": 0.1123211339232228,
+      "n_pi_lt_0_05": 0,
+      "n_labelled_pi_lt_0_10": 0,
+      "weight_cap_p99": 3.9133664937420995,
+      "weight_max_untruncated": 8.903044022717495,
+      "n_truncated": 10,
+      "weight_sum": 1376.082393533046,
+      "n_eligible": 1456,
+      "ess": 829.5492312159029,
+      "n_labelled": 979,
+      "coefficients": {
+        "age": -0.131,
+        "age_miss": -0.385,
+        "nihss": 0.091,
+        "nihss_miss": -0.494,
+        "gcs": 0.174,
+        "gcs_miss": -0.528,
+        "mrs": 0.108,
+        "mrs_miss": 0.092,
+        "sbp": 0.054,
+        "sbp_miss": -0.433,
+        "male": 0.065,
+        "male_miss": 0.0,
+        "hemorrhagic": 0.082,
+        "hemorrhagic_miss": -1.063,
+        "hypertension": -0.189,
+        "hypertension_miss": -1.089,
+        "diabetes": 0.049,
+        "diabetes_miss": -0.096,
+        "period_2013-14": -0.282,
+        "period_2015-16": -0.217,
+        "period_2017-19": -2.325,
+        "period_2020": -2.956,
+        "period_2021-23": -1.68,
+        "disp_death": 2.461,
+        "disp_transfer": -0.97,
+        "disp_other": -0.511,
+        "disp_missing": 0.0,
+        "los_gt30": -0.081
+      },
+      "pi_by_disposition": {
+        "death": [
+          0.481,
+          0.969,
+          0.993
+        ],
+        "home": [
+          0.064,
+          0.768,
+          0.93
+        ],
+        "transfer": [
+          0.089,
+          0.701,
+          0.833
+        ],
+        "other": [
+          0.094,
+          0.367,
+          0.793
+        ]
+      }
+    },
+    "postdischarge_risk_by_period": {
+      "2010-12": "14/205",
+      "2013-14": "13/153",
+      "2015-16": "1/147",
+      "2017-19": "1/76",
+      "2020": "1/6",
+      "2021-23": "1/12"
+    },
+    "postdischarge_risk_pooled": "31/599 (5.2%)",
+    "delta_table": [
+      {
+        "reference": "early_era",
+        "delta_odds_ratio": 0.25,
+        "expected_deaths_unresolved": 85.8,
+        "mortality_pct": 26.8
+      },
+      {
+        "reference": "early_era",
+        "delta_odds_ratio": 0.5,
+        "expected_deaths_unresolved": 113.1,
+        "mortality_pct": 28.6
+      },
+      {
+        "reference": "early_era",
+        "delta_odds_ratio": 1.0,
+        "expected_deaths_unresolved": 146.0,
+        "mortality_pct": 30.7
+      },
+      {
+        "reference": "early_era",
+        "delta_odds_ratio": 2.0,
+        "expected_deaths_unresolved": 189.2,
+        "mortality_pct": 33.4
+      },
+      {
+        "reference": "early_era",
+        "delta_odds_ratio": 4.0,
+        "expected_deaths_unresolved": 247.2,
+        "mortality_pct": 37.1
+      },
+      {
+        "reference": "early_era",
+        "delta_odds_ratio": 8.0,
+        "expected_deaths_unresolved": 320.2,
+        "mortality_pct": 41.7
+      },
+      {
+        "reference": "period_specific",
+        "delta_odds_ratio": 0.25,
+        "expected_deaths_unresolved": 82.0,
+        "mortality_pct": 26.6
+      },
+      {
+        "reference": "period_specific",
+        "delta_odds_ratio": 0.5,
+        "expected_deaths_unresolved": 105.6,
+        "mortality_pct": 28.1
+      },
+      {
+        "reference": "period_specific",
+        "delta_odds_ratio": 1.0,
+        "expected_deaths_unresolved": 131.8,
+        "mortality_pct": 29.8
+      },
+      {
+        "reference": "period_specific",
+        "delta_odds_ratio": 2.0,
+        "expected_deaths_unresolved": 163.3,
+        "mortality_pct": 31.8
+      },
+      {
+        "reference": "period_specific",
+        "delta_odds_ratio": 4.0,
+        "expected_deaths_unresolved": 203.8,
+        "mortality_pct": 34.3
+      },
+      {
+        "reference": "period_specific",
+        "delta_odds_ratio": 8.0,
+        "expected_deaths_unresolved": 255.6,
+        "mortality_pct": 37.6
+      }
+    ]
+  },
+  "comparison_n": {
+    "labelled": 982,
+    "unresolved": 597
+  },
+  "strict_timing": {
+    "eligible": 1579,
+    "labelled": 949,
+    "deaths": 305,
+    "unresolved": 630,
+    "labelled_mortality_pct": 32.1,
+    "labelled_mortality_ci": [
+      29.2,
+      35.2
+    ],
+    "bound_all_unresolved_alive_pct": 19.3,
+    "bound_all_unresolved_dead_pct": 59.2,
+    "inhosp_30d_deaths": 305,
+    "inhosp_denominator_known_disposition": 1292,
+    "inhosp_30d_mortality_pct": 23.6,
+    "inhosp_30d_mortality_ci": [
+      21.4,
+      26.0
+    ],
+    "later_contact_recorded": 705,
+    "later_contact_pct": 44.6,
+    "later_contact_without_death1": 24,
+    "later_alive_without_death1": 23,
+    "n4_alive_by_later_contact": 20,
+    "ipw_population": 1456,
+    "ipw_population_labelled": 946,
+    "excluded_from_ipw_no_disposition": 123,
+    "ipw_mortality_pct": 24.0,
+    "ipw_mortality_ci": [
+      21.3,
+      26.6
+    ],
+    "ipw_bootstrap_replicates": 300,
+    "ipw_diagnostics": {
+      "pi_min": 0.04291475389626412,
+      "pi_max": 0.9935686832229937,
+      "pi_labelled_min": 0.10227273004019112,
+      "n_pi_lt_0_05": 3,
+      "n_labelled_pi_lt_0_10": 0,
+      "weight_cap_p99": 4.214526306522609,
+      "weight_max_untruncated": 9.777777513194575,
+      "n_truncated": 10,
+      "weight_sum": 1371.8332679389557,
+      "n_eligible": 1456,
+      "ess": 794.3604210824221,
+      "n_labelled": 946,
+      "coefficients": {
+        "age": -0.193,
+        "age_miss": -0.327,
+        "nihss": -0.216,
+        "nihss_miss": -0.342,
+        "gcs": 0.24,
+        "gcs_miss": -0.553,
+        "mrs": 0.254,
+        "mrs_miss": -0.087,
+        "sbp": 0.018,
+        "sbp_miss": -0.492,
+        "male": 0.125,
+        "male_miss": 0.0,
+        "hemorrhagic": 0.15,
+        "hemorrhagic_miss": -1.01,
+        "hypertension": -0.141,
+        "hypertension_miss": -1.089,
+        "diabetes": 0.004,
+        "diabetes_miss": -0.128,
+        "period_2013-14": -0.329,
+        "period_2015-16": 0.105,
+        "period_2017-19": -2.063,
+        "period_2020": -2.778,
+        "period_2021-23": -1.5,
+        "disp_death": 2.698,
+        "disp_transfer": -1.456,
+        "disp_other": -0.466,
+        "disp_missing": 0.0,
+        "los_gt30": -0.126
+      },
+      "pi_by_disposition": {
+        "death": [
+          0.493,
+          0.966,
+          0.994
+        ],
+        "home": [
+          0.043,
+          0.716,
+          0.928
+        ],
+        "transfer": [
+          0.055,
+          0.481,
+          0.698
+        ],
+        "other": [
+          0.096,
+          0.364,
+          0.786
+        ]
+      }
+    },
+    "postdischarge_risk_by_period": {
+      "2010-12": "0/191",
+      "2013-14": "0/140",
+      "2015-16": "0/146",
+      "2017-19": "0/75",
+      "2020": "0/5",
+      "2021-23": "0/11"
+    },
+    "postdischarge_risk_pooled": "0/568 (0.0%)",
+    "delta_table": [
+      {
+        "reference": "early_era",
+        "delta_odds_ratio": 0.25,
+        "expected_deaths_unresolved": 70.2,
+        "mortality_pct": 23.8
+      },
+      {
+        "reference": "early_era",
+        "delta_odds_ratio": 0.5,
+        "expected_deaths_unresolved": 91.8,
+        "mortality_pct": 25.1
+      },
+      {
+        "reference": "early_era",
+        "delta_odds_ratio": 1.0,
+        "expected_deaths_unresolved": 112.9,
+        "mortality_pct": 26.5
+      },
+      {
+        "reference": "early_era",
+        "delta_odds_ratio": 2.0,
+        "expected_deaths_unresolved": 133.6,
+        "mortality_pct": 27.8
+      },
+      {
+        "reference": "early_era",
+        "delta_odds_ratio": 4.0,
+        "expected_deaths_unresolved": 154.5,
+        "mortality_pct": 29.1
+      },
+      {
+        "reference": "early_era",
+        "delta_odds_ratio": 8.0,
+        "expected_deaths_unresolved": 175.8,
+        "mortality_pct": 30.4
+      },
+      {
+        "reference": "period_specific",
+        "delta_odds_ratio": 0.25,
+        "expected_deaths_unresolved": 70.5,
+        "mortality_pct": 23.8
+      },
+      {
+        "reference": "period_specific",
+        "delta_odds_ratio": 0.5,
+        "expected_deaths_unresolved": 92.3,
+        "mortality_pct": 25.2
+      },
+      {
+        "reference": "period_specific",
+        "delta_odds_ratio": 1.0,
+        "expected_deaths_unresolved": 113.9,
+        "mortality_pct": 26.5
+      },
+      {
+        "reference": "period_specific",
+        "delta_odds_ratio": 2.0,
+        "expected_deaths_unresolved": 135.6,
+        "mortality_pct": 27.9
+      },
+      {
+        "reference": "period_specific",
+        "delta_odds_ratio": 4.0,
+        "expected_deaths_unresolved": 158.4,
+        "mortality_pct": 29.3
+      },
+      {
+        "reference": "period_specific",
+        "delta_odds_ratio": 8.0,
+        "expected_deaths_unresolved": 183.3,
+        "mortality_pct": 30.9
+      }
+    ]
+  }
+}

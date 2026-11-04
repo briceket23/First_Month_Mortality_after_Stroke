@@ -1,0 +1,74 @@
+missingness_ceiling_for_predictor: 0.6
+imputation:
+  method: scikit-learn IterativeImputer (BayesianRidge), max_iter 15, fitted inside every training fold; outcome, period and post-admission fields excluded
+  multiple_imputation_sensitivity:
+    m: 5
+    sample_posterior: true
+unit_harmonisation:
+- creatinine mg/L -> mg/dL (/10)
+- platelets and WBC absolute counts -> x10^3/uL
+- temperature > 50 divided by 10
+plausibility_ranges: registry.build_records (values outside range set to missing; logged)
+date_rules:
+  entry: Date of entry
+  release: Release date
+  cell_type_expected: Excel datetime
+  number_format_observed: mm-dd-yy
+  valid_entry_years:
+  - 2010
+  - 2023
+  valid_release_years:
+  - 2010
+  - 2024
+  parser_note: 'pandas < 3.0 converts years > 2262 to NaT silently (two rows: entry 3016, release 2916); pandas >= 3.0 required or the year guard applies'
+los_rule:
+  column: Length of hospitalization
+  unit_assumed: days (recorded; inclusive/elapsed convention mixed)
+  missing_code: 99
+  max_plausible_days: 120
+  rule: date-derived elapsed days when both dates valid and 0-120 d, else recorded LOS; opposite sides of day 30 without month-1 status => unresolved
+excluded_post_baseline_fields:
+- Length of hospitalization
+- Release date
+- Become after leaving UNV
+- Cause of death
+- death1
+- death3
+- death6
+- death9
+- duration followed1
+- duration followed3
+- duration followed6
+- duration followed9
+- all *M1/M3/M6/M9/M12 follow-up fields
+- Complication per hospitalization
+- output processing
+candidate_predictors:
+- age
+- nihss
+- gcs
+- mrs
+- sbp
+- dbp
+- heart_rate
+- resp_rate
+- temperature
+- spo2
+- glucose_cap
+- creatinine
+- urea
+- total_cholesterol
+- hemoglobin
+- wbc
+- platelets
+- crp
+- sodium
+- potassium
+- male
+- hypertension
+- diabetes
+- smoking
+- heart_disease
+- atrial_fib
+- prior_stroke
+- hemorrhagic

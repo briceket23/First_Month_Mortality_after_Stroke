@@ -1,0 +1,15 @@
+data/raw/*
+!data/raw/README.md
+data/interim/*
+data/processed/*
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+outputs/**/*.pkl
+__pycache__/
+.pytest_cache/
+*.pyc
+manuscript/*.aux
+manuscript/*.log
+manuscript/*.out
+manuscript/*.blg
+manuscript/*.spl

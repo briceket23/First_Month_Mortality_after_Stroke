@@ -1,0 +1,18 @@
+\begin{table}[htbp]\centering\scriptsize
+\caption{Temporal validation: training on admissions before 2018-11-20 and testing on later admissions (cut-off = 70th percentile of admission dates among all eligible patients; identical for every endpoint). $n$/deaths shown for training and test sets.}\label{tab:temporal}
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.8cm}rr>{\raggedright\arraybackslash}p{2.6cm}rr}
+\toprule
+Endpoint & Model & Train $n$/deaths & Test $n$/deaths & AUROC (95\% CI) & Slope & Intercept \\
+\midrule
+Revised primary endpoint & L2 logistic regression & 846/283 & 136/55 & 0.833 (0.764--0.902) & 1.23 & 0.72 \\
+ & Clinical-reference model & 846/283 & 136/55 & 0.811 (0.737--0.886) & 1.00 & 0.85 \\
+ & Random forest & 846/283 & 136/55 & 0.819 (0.744--0.893) & 1.09 & 0.71 \\
+ & Histogram gradient boosting & 846/283 & 136/55 & 0.815 (0.738--0.891) & 0.89 & 0.77 \\
+ & XGBoost & 846/283 & 136/55 & 0.791 (0.713--0.869) & 0.49 & 1.18 \\
+Strict admission-timed endpoint & L2 logistic regression & 815/252 & 134/53 & 0.833 (0.764--0.903) & 1.17 & 0.85 \\
+ & Clinical-reference model & 815/252 & 134/53 & 0.815 (0.741--0.888) & 0.94 & 0.96 \\
+Observed-only \texttt{death1} & L2 logistic regression & 701/156 & 83/4 & 0.867 (0.758--0.976) & 1.02 & -1.20 \\
+ & Clinical-reference model & 701/156 & 83/4 & 0.858 (0.743--0.972) & 0.77 & -1.06 \\
+\bottomrule
+\end{tabular}
+\end{table}

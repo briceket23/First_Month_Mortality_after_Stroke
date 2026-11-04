@@ -1,0 +1,24 @@
+name: stroke_reproducibility_rebuilt
+version: 3.0.0
+manuscript: NEURI-D-26-00184
+journal: Neuroscience Informatics
+data:
+  workbook_env_var: STROKE_DATA_PATH
+  local_secure_path: data/raw/database_stroke_copy.xlsx (git-ignored; never committed)
+  synthetic_fixture: data/synthetic_fixtures/synthetic_registry.xlsx
+  synthetic_env_var: STROKE_SYNTHETIC=1
+  dictionary: dictionary/stroke_data_dictionary.xlsx
+  row_level_outputs: data/processed (git-ignored)
+modes:
+  audit: integrity, duplicates, dates, dictionary, endpoint provenance; no models
+  observed: recorded month-1 status only
+  reconstructed: full analysis; gated by outcome_definition.approval_state
+  sensitivity: labelled scenarios
+  all: audit -> reconstructed -> manuscript tables -> verification
+seed: 20261016
+outputs:
+  figures: outputs/figures
+  tables: outputs/tables
+  reports: outputs/reports
+  logs: outputs/logs
+  manifests: outputs/manifests

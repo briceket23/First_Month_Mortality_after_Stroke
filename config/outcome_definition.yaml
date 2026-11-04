@@ -1,0 +1,49 @@
+definition_version: 1.3 (2 Nov 2026)
+estimand: All-cause death within 30 days of hospital admission (day 0 = Date of entry), including death during the index hospitalisation
+approval_state: DICTIONARY_SUPPORTED_NOT_CUSTODIAN_VERIFIED
+approval_state_values:
+- UNVERIFIED
+- DICTIONARY_SUPPORTED_NOT_CUSTODIAN_VERIFIED
+- VERIFIED
+what_the_dictionary_establishes:
+  death1: Death at Month 1, recording if the patient passed away within the first month.
+  follow_up_timing: assessments described as 'after the stroke' (month 1-12 items)
+  codes: none
+  date_of_death: none
+assumptions:
+  A1: 'disposition ''death'' = death during the index hospitalisation; release date / LOS end at death (supported: 217/219 recorded causes of death; dictionary ''Outcome
+    after leaving the UNV'')'
+  A2: death1 = Yes recorded after discharge occurred within 30 days of admission (supported by the stroke-anchored dictionary definition; not verifiable against dates)
+evidence_grades:
+  E1/E0: documented dates or unequivocal definition (none reachable)
+  R: recorded status, time origin not explicit
+  I: inferred from disposition and stay under A1
+  U: unresolved
+  X: undocumented code
+label_classes:
+- E1_inhosp_death_le30
+- E2_month1_death_postdischarge
+- N1_inhosp_death_gt30
+- N2_month1_alive
+- N3_discharged_alive_gt30
+- N4_alive_later_contact
+- U_*
+variants:
+  primary: hierarchy above
+  strict_timing: E2 -> unresolved
+  observed_only: death1 Yes/No only
+  onset_anchor_gap: N2 with onset-to-arrival delay > 72 h -> unresolved
+  onset_anchor_gap_unknown_excluded: as above plus unknown delay -> unresolved
+  no_later_contact: N4 -> unresolved
+run_mode_policy:
+  observed: always allowed (endpoint named 'recorded month-1 vital status')
+  reconstructed: allowed only if approval_state == VERIFIED, or if approval_state == DICTIONARY_SUPPORTED_NOT_CUSTODIAN_VERIFIED and the run is invoked with --accept-provisional,
+    in which case every output is stamped PROVISIONAL and the manuscript must state the assumptions
+  fallback: 'none: the runner stops with an error; it never substitutes assumptions silently'
+duplicate_policy:
+  rule: rule-based reconciliation with per-group evidence log (blank pair dropped; sex conflict or age difference > 5 y = two patients; otherwise merged with disagreeing
+    predictors set missing and disagreeing outcome fields => outcome unresolved)
+  approval_state: INTERIM_RULE_NOT_CUSTODIAN_APPROVED
+  sensitivity_rules:
+  - keep_first
+  - exclude_conflicts

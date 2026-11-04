@@ -1,0 +1,497 @@
+[
+ {
+  "check": "raw workbook checksum",
+  "passed": true,
+  "detail": "08541ef199c1656c184291f24b4cc3e3"
+ },
+ {
+  "check": "all 1,653 source rows preserved with unique ids",
+  "passed": true,
+  "detail": "1653"
+ },
+ {
+  "check": "[primary] eligible = labelled + unresolved",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "[primary] class counts sum to eligible",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "[primary] exclusions arithmetic",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "[strict_timing] eligible = labelled + unresolved",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "[strict_timing] class counts sum to eligible",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "[strict_timing] exclusions arithmetic",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "[dup_keep_first] eligible = labelled + unresolved",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "[dup_keep_first] class counts sum to eligible",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "[dup_keep_first] exclusions arithmetic",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "[dup_exclude_conflicts] eligible = labelled + unresolved",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "[dup_exclude_conflicts] class counts sum to eligible",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "[dup_exclude_conflicts] exclusions arithmetic",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "no source row used by two analytic patients",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "every analytic patient traces to source rows",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "labels only where evidence class is not unresolved",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "submitted reconstruction counts reproduced (803/218/594, 345)",
+  "passed": true,
+  "detail": "{'after_dedup': 1615, 'observed': 803, 'inferred': 218, 'unlabelled': 594, 'labelled': 1021, 'deaths': 345, 'mortality_pct': 33.8, 'observed_only_deaths': 162, 'class_counts': {'observed_death1': 803, 'unlabelled': 594, 'inferred_inhosp_death_le30': 183, 'inferred_later_followup_alive': 23, 'inferred_long_stay_alive': 6, 'inferred_inhosp_death_gt30': 6}}"
+ },
+ {
+  "check": "38 duplicate groups logged with a decision",
+  "passed": true,
+  "detail": "{'D2_same_encounter_compatible': 26, 'D3_same_encounter_outcome_conflict': 7, 'D1_identifier_collision': 4, 'D0_non_record': 1}"
+ },
+ {
+  "check": "public duplicate log contains no identifier codes",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "no post-admission variable among predictors",
+  "passed": true,
+  "detail": "['age', 'nihss', 'gcs', 'mrs', 'sbp', 'dbp', 'heart_rate', 'resp_rate', 'temperature', 'glucose_cap', 'creatinine', 'urea', 'total_cholesterol', 'hemoglobin', 'wbc', 'platelets', 'crp', 'sodium', 'potassium', 'male', 'hypertension', 'diabetes', 'smoking', 'heart_disease', 'atrial_fib', 'prior_stroke', 'hemorrhagic']"
+ },
+ {
+  "check": "imputer and scaler inside the tuned pipeline",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "temporal: all training admissions before cut-off",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "temporal: all test admissions on/after cut-off",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "temporal: train and test disjoint",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "temporal cut-off = 70th percentile of eligible admission dates (outcome-independent)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "recalibration fitted in-fold only (CalibratedClassifierCV inside outer training fold)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: 62% of eligible labelled",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: labelled mortality 46% (2017-19) and 62% (2020)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: labelled 44% and 7%",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: labelled 91% in 2010-12; 7-46% in 2017-23",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: 217 of 219 causes of death with disposition death",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: 14 misaligned rows",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: 22 release before entry",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: duplicate decisions 1/4/26/7",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: median 18 conflicting fields per duplicate group",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: NIHSS 41% and mRS 48% missing (labelled)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: SpO2 69% missing; BMI 89% missing in registry",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: resp 37%, CRP 44%, cholesterol 46% missing",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: imputer converged in 11 iterations",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: 20% of unresolved without disposition",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: NIHSS median 10 vs 7; mRS 4 vs 3",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: haemorrhagic 41.6% vs 32.4%; NIHSS missing 41 vs 58%",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: temporal tree ensembles: manuscript range generated from outputs (TEnsLo/TEnsHi macros)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: month-1 recorded ~90% early, 3-61% from 2015",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: follow-up duration coded 1 / 30 / 0",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: matching labelled mortality needs delta 2-4",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: 38% of eligible unresolved",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: 24 TIA excluded",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: 33 post-discharge events (A2)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: fold count used in text (macro) consistent",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: temporal difference compatible with gain up to 0.07",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: in-hospital death median stay 4 d; 1 death and 11 home discharges at days 28-32",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: 37/38 groups any difference; 35/38 timing/outcome",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: tracker counts 23 / 174 / 175 reproduced",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: 28 groups = timing/outcome both-present differences",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: implausible dates rows 767/773/808",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: 22 release-before-entry within registry years",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: date-derived stays >120 d (9 records)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: A-4: 20 non-events from later contact",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: later contacts 87% in 2010-12, <=16% from 2017",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: N4 = 20 later-contact labels",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: 27 candidate predictors",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: MI m=5 sensitivity present with between-draw SD",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: missing-indicator set includes CRP, urea, cholesterol, resp rate, mRS",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: A-7 tier effort figures present",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: no coloured hyperlinks (print)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: Discussion has >= 2 subsections",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "LaTeX: no errors",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "LaTeX: no undefined references/citations",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "PDF: no unresolved '??' references",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "PDF: no bracketed placeholders",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "PDF page count",
+  "passed": true,
+  "detail": "24"
+ },
+ {
+  "check": "BibTeX: no warnings or errors",
+  "passed": true,
+  "detail": "le$ -- 1\npurify$ -- 0\nquote$ -- 0\nskip$ -- 578\nstack$ -- 0\nsubstring$ -- 610\nswap$ -- 92\ntext.length$ -- 1\ntext.prefix$ -- 0\ntop$ -- 0\ntype$ -- 0\nwarning$ -- 0\nwhile$ -- 72\nwidth$ -- 30\nwrite$ -- 283\n"
+ },
+ {
+  "check": "journal: structured abstract <= 250 words",
+  "passed": true,
+  "detail": "249"
+ },
+ {
+  "check": "journal: 1-7 keywords",
+  "passed": true,
+  "detail": "7"
+ },
+ {
+  "check": "journal: generative-AI declaration present",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "journal: 3-5 highlights, each <= 85 characters",
+  "passed": true,
+  "detail": "[81, 84, 71, 74, 78]"
+ },
+ {
+  "check": "citations: off-topic or mis-keyed sources removed",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "citations: iScore/PLAN cited to original derivation papers",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "citations: RECORD and STROBE cited",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "citations: Nkoke figures match source (15% readmitted)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: post hoc Riley criteria met only under AUROC-based R2",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript statement: four imputation sensitivity analyses (consistent wording)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "manuscript: observed-only mortality comes from the generated macro (no hard-coded 20.2%)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "dictionary checksum is one of the recorded versions",
+  "passed": true,
+  "detail": "stroke_data_dictionnary.xlsx"
+ },
+ {
+  "check": "manuscript quotes the dictionary definition of death1 verbatim",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "dictionary: follow-up items described as 'after the stroke'",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "dictionary: no value codes (statement in manuscript)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "dictionary: no date-of-death variable",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "dursuiv1 = 1 in 2010-16 and 30 in 2017-19 (dominant values)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "onset-anchored sensitivity analyses present",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "A1: 217 of 219 recorded causes belong to in-hospital deaths (unchanged statement)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "letter: no placeholders",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "letter: residual endpoint uncertainty stated (no dates of death; time origin not explicit)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "letter: dictionary definition of death1 quoted",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "letter: all 19 tracker items answered",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "letter: verbatim reviewer text present",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "check": "letter: every page cited exists",
+  "passed": true,
+  "detail": "45"
+ }
+]

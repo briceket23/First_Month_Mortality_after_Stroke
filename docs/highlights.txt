@@ -1,0 +1,5 @@
+Month-1 vital status in a Cameroonian stroke registry was recorded inconsistently
+Excluding or reconstructing unknown outcomes biased mortality in opposite directions
+Registry-wide 30-day mortality is not identified: bounds 21.4% to 59.2%
+Admission data discriminated first-month death well (nested CV AUROC 0.86)
+Absolute risks need documented outcomes and external validation before any use

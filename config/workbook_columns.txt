@@ -1,0 +1,251 @@
+unique_code
+Date of entry
+Release date
+Date of birth
+age
+Age category
+sex
+marital status
+profession
+Nature Profession
+professional category
+educational level
+Monthly income
+place of residence
+provenance structure
+means of transport
+type of support
+illness-consultation start time
+HGD arrival time
+delay4.5
+Intervention time for a neurologist
+HISTORY of hypertension
+Diabetes ATCD
+Type of diabetes
+atcd dyslipidemia
+Smoking
+Number of AP
+ATCD of alcoholism
+Alcohol index
+SAS ATCD
+history of migraine
+Type of migraine
+pill use
+hormone replacement therapy
+ATCD HIV infection
+If HIV, recent CD4 count
+If HIV, ARV protocol
+Cotrimoxazole prophylaxis
+ATCD of angina or MI
+ATCD of atrial fibrillation
+ATCD of heart disease
+AOMI ATCD
+Stroke ATCD
+If yes to ATCD AVC
+AIT ATCD
+AIC ATCD
+ATCD AVC H
+AVCH ATCD
+Usual treatment
+Usual treatment_med
+Antithrombotic treatment
+What antithrombotic ttt
+Vascular treatment
+What vascular ttt
+Other treatment
+Systolic BP
+Diastolic BP
+cardiac frequency
+respiratory rate
+temperature
+SA O2
+capillary blood sugar
+Body mass index
+Abdominal circumference
+NIHSS score
+Modified Rankin score
+ketonuria
+glycosuria
+proteinuria
+Positive nitrites and WBCs
+glagow score
+Extraneurological syndr
+epileptic seizures
+crisis onset time
+Type of crisis
+diagnostic
+new diagnosis
+related diagnosis
+if yes (dg connected)
+Complication on admission
+Name the complications
+Time to obtain the scanner
+HGD CT completion time
+Brain CT results
+Cerebral CT edema
+mass Effect
+ Ischemik stroke on scanner
+ Stroke Hemorrhagic
+AVCI and AIT mechanism
+OCSP Classification
+AVCH mechanism
+Vascular territory
+sylvian total
+Deep Sylvian
+Sylvien superf
+Anterior cerebral
+Carotid syndrome
+Cerebral post
+Cerebellum
+Junctional Terr
+Gap
+Other anomalies
+CT results of AVCH
+Other AVCH anomalies
+EEG
+EEG result
+ECG
+ECG result
+ECG abnormalities
+Cardiac Doppler
+cardiac doppler result
+Doppler Vx of the neck
+doppler Vx result of the neck
+venous blood sugar
+Glycosylated hemoglobin
+Na+
+K+
+ Total cholesterol
+HDL
+LDL
+Triglycerides
+creatinine
+uremia
+HIV serology
+Type HIV
+Tick drop
+GE result
+If GE positive, parasitic load
+Uric acid
+VS1
+VS2
+CRP
+Prothrombin TX
+INR
+TCK
+LCR
+CSF macro
+GB LCR
+CSF Prot
+Glucose CSF
+chlorine LCR
+LCR culture
+Tx Hb
+hematocrit
+Mean corpuscular volume
+Mean corpuscular hemoglobin content
+Mean corpuscular hemoglobin concentration
+GB blood
+Blood platelets
+Length of hospitalization
+Become after leaving UNV
+output processing
+Complication per hospitalization
+Cause of death
+SysT blood pressure at M1
+Dia blood pressure at M1
+pulse at M1
+NIHSS to M1
+Rankin at M1
+Barthel at M1
+Epilepsy at M1
+Dementia at M1
+Full recovery at M1
+Return to work at M1
+MCI at M1
+Onset of diabetes at M1
+Onset of hypertension at M1
+Occurrence of ACFA at M1
+stroke recurrence at M1
+duration followed1
+death1
+Blood pressure SYSt at M3
+DIAst blood pressure at M3
+pulse at M3
+BMI at M3
+LDLC to M3
+CRP to M3
+Triglycerides at M3
+HbA1c to M3
+NIHSS to M3
+Rankin at M3
+Barthel at M3
+Epilepsy at M3
+Dementia at M3
+Full recovery at M3
+Return to work at M3
+MCI at M3
+Onset of diabetes at M3
+Onset of hypertension at M3
+Occurrence of ACFA at M3
+stroke recurrence at m3
+duration followed3
+death3
+Systemic blood pressure at M6
+diastolic blood pressure at M6
+pulse at M6
+BMI at M6
+LDLC to M6
+CRP to M6
+Triglycerides at M6
+HbA1c at M6
+NIHSS to M6
+Rankin at M6
+Barthel at M6
+Epilepsy at M6
+Dementia at M6
+Full recovery at M6
+Return to work at M6
+MCI to M6
+Onset of diabetes at M6
+Onset of hypertension at M6
+ACFA’s appearance at M6
+stroke recurrence M6
+duration followed6
+death6
+Systemic blood pressure at M9
+diastolic blood pressure at M9
+pulse at M9
+BMI at M9
+LDLC to M9
+CRP to M9
+Triglycerides at M9
+HbA1c at M9
+NIHSS to M9
+Rankin at M9
+Barthel at M9
+Epilepsy at M9
+Dementia at M9
+Full recovery at M9
+Return to work at M9
+MCI to M9
+Onset of diabetes at M9
+Onset of hypertension at M9
+Occurrence of ACFA at M9
+stroke recurrence M9
+duration followed9
+death9
+Systemic blood pressure at M12
+diastolic blood pressure at M12
+pulse at M12
+BMI at M12
+LDLC to M12
+CRP to M12
+Triglycerides at M12
+HbA1c at M12
+NIHSS to M12
+Rankin at M12
+Barthel at M12
+Epilepsy at M12
+Dementia at M12
+Full recovery at M12

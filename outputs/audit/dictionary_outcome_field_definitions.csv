@@ -1,0 +1,19 @@
+name,label,type,description
+datentré,Date of entry,date,The date when the patient was first admitted or registered.
+datesor,Release date,date,The date when the patient was discharged or released from the hospital or care facility.
+délaicon,illness-consultation start time,num,The time from the onset of illness to the first consultation.
+délaihgd,HGD arrival time,num,The time the patient arrived at the hospital or care facility (HGD).
+rankin,Modified Rankin score,num,"Modified Rankin Scale score, used to measure the degree of disability or dependence."
+datesort1,Release date1,date,"First release date, indicating the initial date the patient was discharged."
+duréehos,Length of hospitalization,date,"Length of hospitalization, measuring the total time the patient spent in the hospital."
+devenir,Become after leaving UNV,Chr,"Outcome after leaving the UNV, describing the patient’s condition after discharge."
+caudece,Cause of death,Chr,"Cause of death, recording the cause if the patient passed away."
+rankin1,Rankin at M1,,"Modified Rankin Scale score at Month 1, measuring the degree of disability or dependence in the daily activities of the patient after one month."
+barthel1,Barthel at M1,,"Barthel Index at Month 1, assessing the patient’s ability to perform activities of daily living one month after the stroke."
+dursuiv1,duration followed1,,"Duration of follow-up at Month 1, recording the duration of follow-up care after one month."
+décès1,death1,,"Death at Month 1, recording if the patient passed away within the first month."
+ranki_m3,Rankin at M3,,"Modified Rankin Scale score at Month 3, measuring the degree of disability or dependence in daily activities three months after the stroke."
+dursuiv3,duration followed3,,"Duration of follow-up at Month 3, recording the duration of follow-up care after three months."
+décès3,death3,,"Death at Month 3, recording if the patient passed away within three months."
+décès6,death6,,"Death at Month 6, recording if the patient passed away within six months."
+décès9,death9,,"Death at Month 9, recording if the patient passed away within nine months."

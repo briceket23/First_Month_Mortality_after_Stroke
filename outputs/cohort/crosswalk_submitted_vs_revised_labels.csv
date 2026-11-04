@@ -1,0 +1,8 @@
+y_orig_class,E1_inhosp_death_le30,E2_month1_death_postdischarge,N1_inhosp_death_gt30,N2_month1_alive,N3_discharged_alive_gt30,N4_alive_later_contact,U_contradictory_status,U_discharged_alive_no_followup,U_disposition_missing_no_followup,U_duplicate_outcome_conflict,U_inhosp_death_timing_unknown,U_later_death_timing_unknown,U_los_conflict_at_boundary,U_other_disposition_no_followup,U_record_misaligned
+inferred_inhosp_death_gt30,0,0,2,0,0,0,0,0,0,0,0,0,3,0,1
+inferred_inhosp_death_le30,180,0,0,0,0,0,1,0,0,0,0,0,2,0,0
+inferred_later_followup_alive,0,0,0,0,0,20,0,0,0,1,0,0,0,0,1
+inferred_long_stay_alive,0,0,0,0,5,0,0,1,0,0,0,0,0,0,0
+not in submitted cohort,0,0,0,1,0,0,0,1,1,0,0,0,0,0,1
+observed_death1,125,33,0,613,0,0,9,0,0,3,0,0,0,0,7
+unlabelled,0,0,0,3,0,0,0,347,119,3,2,1,3,90,0

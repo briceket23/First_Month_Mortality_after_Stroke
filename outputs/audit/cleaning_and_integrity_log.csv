@@ -1,0 +1,39 @@
+step,item,n_records,detail
+integrity,column_shift,14,>= 3 numeric codes in Yes/No fields (misaligned row)
+integrity,blank_record,9,"no admission date, age or sex"
+dates_los,flag_entry_missing,14,flagged; raw value preserved
+dates_los,flag_entry_impossible_year,1,flagged; raw value preserved
+dates_los,flag_release_impossible_year,2,flagged; raw value preserved
+dates_los,flag_release_before_entry,22,flagged; raw value preserved
+dates_los,flag_date_stay_implausible,9,flagged; raw value preserved
+dates_los,flag_los_missing_code,1,flagged; raw value preserved
+dates_los,flag_los_implausible,0,flagged; raw value preserved
+dates_los,flag_los_disagree,84,flagged; raw value preserved
+outcome_fields,death1_invalid_code,1,"non Yes/No code (undocumented, e.g. 9/3) -> treated as unknown"
+outcome_fields,death3_invalid_code,3,"non Yes/No code (undocumented, e.g. 9/3) -> treated as unknown"
+outcome_fields,death6_invalid_code,0,"non Yes/No code (undocumented, e.g. 9/3) -> treated as unknown"
+outcome_fields,death9_invalid_code,0,"non Yes/No code (undocumented, e.g. 9/3) -> treated as unknown"
+population,age_outside_18_110,3,set to NA
+range_to_NA,gcs,15,"outside [3, 15]"
+range_to_NA,mrs,2,"outside [0, 5]"
+range_to_NA,sbp,2,"outside [50, 300]"
+range_to_NA,dbp,17,"outside [30, 200]"
+range_to_NA,heart_rate,5,"outside [20, 220]"
+range_to_NA,resp_rate,10,"outside [5, 60]"
+unit_fix,temperature_x10,13,values > 50 divided by 10
+range_to_NA,temperature,22,"outside [30, 43]"
+range_to_NA,spo2,15,"outside [50, 100]"
+range_to_NA,bmi,9,"outside [10, 80]"
+range_to_NA,glucose_cap (g/L),13,"outside [0.2, 8]"
+range_to_NA,creatinine (mg/L -> mg/dL),12,"outside [0.1, 25]"
+unit_convert,creatinine,1298,mg/L -> mg/dL (/10)
+range_to_NA,urea (g/L),20,"outside [0, 6]"
+range_to_NA,total_cholesterol,46,"outside [0.3, 15]"
+range_to_NA,hemoglobin,2,"outside [3, 22]"
+unit_harmonise,wbc,310,absolute counts /1000 -> x10^3/uL
+range_to_NA,wbc,5,"outside [0.5, 60]"
+unit_harmonise,platelets,305,absolute counts /1000 -> x10^3/uL
+range_to_NA,platelets,2,"outside [5, 1200]"
+range_to_NA,sodium,10,"outside [100, 180]"
+range_to_NA,potassium,8,"outside [1.5, 9]"
+integrity,column_shift_predictors_blanked,14,clinical predictors set to NA in misaligned rows (raw kept)

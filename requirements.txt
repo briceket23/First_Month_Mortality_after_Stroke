@@ -1,0 +1,12 @@
+pandas>=3.0
+numpy
+scipy
+scikit-learn>=1.9
+xgboost
+shap
+statsmodels
+openpyxl
+matplotlib
+python-docx
+pyyaml
+pytest

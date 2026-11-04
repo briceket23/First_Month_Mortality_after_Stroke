@@ -1,0 +1,13 @@
+question,status,evidence
+Q1 meaning of death1; change around 2014-15,Partly settled,"décès1: 'Death at Month 1, recording if the patient passed away within the first month' (option a of Q1). No explanation of the change in completion around 2014-15."
+Q2 time origin of the month-1 contact,Partly settled (implicit),No explicit origin for décès1; month-1 to month-12 assessments are described as '... after the stroke' (e.g. barthel1 'one month after the stroke'). No statement on telephone follow-up after discharge.
+Q3 meaning of death1 = No,Not settled,Not stated whether 'No' certifies survival through the month or may be entered when the patient was not reached.
+Q4 disposition 'death',Partly settled,devenir: 'Outcome after leaving the UNV'; consistent with A1. Release date at death not stated.
+Q5 disposition 'Other',Not settled,No code list.
+Q6 units and codes of follow-up durations; codes 9/3/99,Partly settled,"dursuiv1: 'Duration of follow-up at Month 1' without unit; observed values 1 (2010-16) and 30 (2017-19), 3 or 90 at month 3, consistent with months vs days; 0 unexplained; no value codes."
+Q7 post-discharge deaths from 2015,Not settled,The single dictionary definition implies in-hospital deaths within month 1 should be recorded as death1 = Yes; the data show they were mostly left blank from 2015.
+Q8 missing dispositions 2020,Not settled,
+Q9 admission Rankin; timing of laboratory values,Not settled,rankin: 'Modified Rankin Scale score' without timing; laboratory items without timing.
+Q10 repeated identifiers,Not settled,"Code_uniq is described as a unique patient identifier, so the 38 repeated codes are entry errors or collisions; source adjudication still needed."
+Q11 date anomalies,Not settled,
+Q12 dates of death for 33 post-discharge deaths,Not settled,No date-of-death variable in the dictionary.

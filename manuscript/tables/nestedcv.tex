@@ -1,0 +1,14 @@
+\begin{table}[htbp]\centering\scriptsize
+\caption{Nested cross-validation (5 outer folds $\times$ 5 repeats; inner 3-fold tuning) on the labelled cohort ($n=982$, 338 deaths). Pooled AUROC uses out-of-fold predictions averaged over repeats (DeLong 95\% CI); fold AUROC is mean $\pm$ SD over the 25 outer test folds. Calibration slope, intercept and Brier score are means over the 5 repeats of pooled out-of-fold predictions.}\label{tab:nestedcv}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}p{2.1cm}rrrr}
+\toprule
+Model & Pooled AUROC (95\% CI) & Fold AUROC & AUPRC & Slope & Intercept & Brier \\
+\midrule
+L2 logistic regression (primary) & 0.863 (0.839--0.886) & 0.862 $\pm$ 0.020 & 0.771 & 1.14 & -0.01 & 0.143 \\
+Clinical-reference model & 0.839 (0.813--0.865) & 0.839 $\pm$ 0.022 & 0.759 & 0.97 & 0.00 & 0.150 \\
+Random forest & 0.862 (0.837--0.887) & 0.861 $\pm$ 0.023 & 0.788 & 1.19 & -0.01 & 0.139 \\
+Histogram gradient boosting & 0.877 (0.854--0.900) & 0.872 $\pm$ 0.025 & 0.813 & 0.99 & 0.02 & 0.132 \\
+XGBoost & 0.878 (0.855--0.901) & 0.876 $\pm$ 0.025 & 0.817 & 0.95 & 0.04 & 0.130 \\
+\bottomrule
+\end{tabular}
+\end{table}

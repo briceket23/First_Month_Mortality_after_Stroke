@@ -1,0 +1,7 @@
+period,eligible,labelled,deaths,labelled_pct,labelled_mortality_pct,inhosp_30d_deaths,known_disposition,inhosp_30d_pct_known_disp,later_contact_recorded,later_contact_pct,later_contact_no_death1,n4_alive_by_later_contact
+2010-12,325,281,82.0,86.5,29.2,82,322,25.5,282,86.8,0,0
+2013-14,271,210,63.0,77.5,30.0,63,263,24.0,191,70.5,8,8
+2015-16,265,212,55.0,80.0,25.9,55,247,22.3,159,60.0,11,9
+2017-19,338,146,66.0,43.2,45.2,66,308,21.4,55,16.3,3,1
+2020,185,12,7.0,6.5,58.3,7,81,8.6,2,1.1,1,1
+2021-23,195,88,32.0,45.1,36.4,32,71,45.1,16,8.2,1,1

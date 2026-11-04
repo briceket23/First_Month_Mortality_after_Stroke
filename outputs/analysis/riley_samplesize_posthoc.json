@@ -1,0 +1,27 @@
+{
+  "n_available": 982,
+  "events_available": 338,
+  "prevalence": 0.3442,
+  "candidate_parameters": 27,
+  "r2cs_max": 0.7241,
+  "scenarios": {
+    "conservative_15pct_of_max": {
+      "n_shrinkage": 2100,
+      "n_optimism": 691,
+      "n_intercept": 347,
+      "n_required": 2100,
+      "anticipated_r2cs": 0.1086,
+      "events_required": 723,
+      "met": false
+    },
+    "from_observed_auroc": {
+      "n_shrinkage": 554,
+      "n_optimism": 592,
+      "n_intercept": 347,
+      "n_required": 592,
+      "anticipated_r2cs": 0.3476,
+      "events_required": 204,
+      "met": true
+    }
+  }
+}

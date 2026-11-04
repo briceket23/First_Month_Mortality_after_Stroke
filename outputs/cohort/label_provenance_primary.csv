@@ -1,0 +1,16 @@
+y_class,n,y,provenance,timing,pct_of_eligible
+E1_inhosp_death_le30,305,1.0,hospital record (disposition + stay),established under A1,19.3
+E2_month1_death_postdischarge,33,1.0,month-1 follow-up field,conditional on A2,2.1
+N1_inhosp_death_gt30,2,0.0,hospital record (disposition + stay),established under A1,0.1
+N2_month1_alive,617,0.0,month-1 follow-up field,established,39.1
+N3_discharged_alive_gt30,5,0.0,hospital record (disposition + stay),established,0.3
+N4_alive_later_contact,20,0.0,month-3/6/9 follow-up field,established,1.3
+U_contradictory_status,10,,none,unresolved,0.6
+U_discharged_alive_no_followup,349,,none,unresolved,22.1
+U_disposition_missing_no_followup,120,,none,unresolved,7.6
+U_duplicate_outcome_conflict,7,,none,unresolved,0.4
+U_inhosp_death_timing_unknown,2,,none,unresolved,0.1
+U_later_death_timing_unknown,1,,none,unresolved,0.1
+U_los_conflict_at_boundary,8,,none,unresolved,0.5
+U_other_disposition_no_followup,90,,none,unresolved,5.7
+U_record_misaligned,10,,none,unresolved,0.6

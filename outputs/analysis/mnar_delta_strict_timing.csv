@@ -1,0 +1,13 @@
+reference,delta_odds_ratio,expected_deaths_unresolved,mortality_pct
+early_era,0.25,70.2,23.8
+early_era,0.5,91.8,25.1
+early_era,1.0,112.9,26.5
+early_era,2.0,133.6,27.8
+early_era,4.0,154.5,29.1
+early_era,8.0,175.8,30.4
+period_specific,0.25,70.5,23.8
+period_specific,0.5,92.3,25.2
+period_specific,1.0,113.9,26.5
+period_specific,2.0,135.6,27.9
+period_specific,4.0,158.4,29.3
+period_specific,8.0,183.3,30.9

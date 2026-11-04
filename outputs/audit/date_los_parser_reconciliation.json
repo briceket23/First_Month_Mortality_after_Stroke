@@ -1,0 +1,48 @@
+{
+ "sheet": [
+  "Feuil1"
+ ],
+ "pandas_current": {
+  "complete_pairs": 1488,
+  "equal": 821,
+  "differ": 667,
+  "negative_in_pairs": 23,
+  "negative_all_date_pairs": 24,
+  "pandas_version": "3.1.0"
+ },
+ "pandas_pre3_emulated": {
+  "complete_pairs": 1486,
+  "equal": 821,
+  "differ": 665,
+  "negative_in_pairs": 22
+ },
+ "openpyxl_raw_cells": {
+  "complete_pairs": 1488,
+  "equal": 821,
+  "differ": 667,
+  "negative_in_pairs": 23,
+  "negative_all_date_pairs": 24,
+  "cell_types": {
+   "entry:datetime": 1639,
+   "release:datetime": 1513,
+   "release:NoneType": 140,
+   "entry:NoneType": 14
+  },
+  "number_formats": {
+   "entry:mm-dd-yy": 1653,
+   "release:mm-dd-yy": 1653
+  },
+  "rows_with_year_beyond_pandas_ns_limit": [
+   {
+    "entry_year": 2016,
+    "release_year": 2916
+   },
+   {
+    "entry_year": 3016,
+    "release_year": 2016
+   }
+  ]
+ },
+ "reconciled": true,
+ "explanation": "All date cells are Excel datetimes. pandas < 3.0 stores timestamps in nanoseconds and converts years > 2262 to NaT silently; the two rows with such years (entry 3016; release 2916) account for the earlier 1,486/665/22 figures. Both rows are flagged as invalid dates (never corrected) by the integrity rules."
+}

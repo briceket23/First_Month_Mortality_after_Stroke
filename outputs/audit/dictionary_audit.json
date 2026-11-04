@@ -1,0 +1,160 @@
+{
+ "conformance": {
+  "dictionary_file": "stroke_data_dictionnary.xlsx",
+  "dictionary_md5": "be778aa084720376bdc1c27392a260af",
+  "dictionary_known": true,
+  "dictionary_rows": 256,
+  "workbook_columns": 251,
+  "dictionary_labels_matched_exactly": 242,
+  "dictionary_variables_not_in_workbook": [
+   [
+    "nom",
+    "patients name"
+   ],
+   [
+    "lieusuiv",
+    "Follow-up location/hospital"
+   ],
+   [
+    "tél1",
+    "Number tél 1"
+   ],
+   [
+    "tél2",
+    "Number tél 2"
+   ],
+   [
+    "traithab",
+    "Usual treatment1"
+   ],
+   [
+    "chlorelc",
+    "culture LCR"
+   ],
+   [
+    "datesort1",
+    "Release date1"
+   ],
+   [
+    "pr_arts1",
+    "SysT blood pressure at M"
+   ],
+   [
+    "mci1",
+    "MCI to M1"
+   ],
+   [
+    "gueri_m3",
+    "Complete healing at M3"
+   ],
+   [
+    "mci_m3",
+    "MCI to M3"
+   ],
+   [
+    "guer_m6",
+    "Full healing at M6"
+   ],
+   [
+    "guer_m9",
+    "Full healing at M9"
+   ],
+   [
+    "guer_m12",
+    "Full healing at M12"
+   ]
+  ],
+  "workbook_columns_not_matched_exactly": [
+   "Usual treatment_med",
+   "chlorine LCR",
+   "Dia blood pressure at M1",
+   "MCI at M1",
+   "Full recovery at M3",
+   "MCI at M3",
+   "Full recovery at M6",
+   "Full recovery at M9",
+   "Full recovery at M12"
+  ],
+  "variables_without_type": 94,
+  "descriptions_with_hedging_words": [
+   "age",
+   "CatAge",
+   "typprofe",
+   "délainew",
+   "traithab"
+  ],
+  "descriptions_with_value_codes": 0,
+  "categories": {
+   "Follow-up and Outcomes": 103,
+   "Clinical and Consultation Information": 58,
+   "Laboratory and Diagnostic Tests": 36,
+   "Medical History (ATCD)": 34,
+   "Sociodemographic Information": 25
+  }
+ },
+ "death1_vs_definition_inhospital": [
+  {
+   "period": "2010-12",
+   "Yes": "80",
+   "No": "0",
+   "missing": "2",
+   "n": "82",
+   "pct_recorded_as_dictionary_requires": "97.6"
+  },
+  {
+   "period": "2013-14",
+   "Yes": "44",
+   "No": "4",
+   "missing": "22",
+   "n": "70",
+   "pct_recorded_as_dictionary_requires": "62.9"
+  },
+  {
+   "period": "2015-16",
+   "Yes": "1",
+   "No": "2",
+   "missing": "58",
+   "n": "61",
+   "pct_recorded_as_dictionary_requires": "1.6"
+  },
+  {
+   "period": "2017-19",
+   "Yes": "0",
+   "No": "1",
+   "missing": "66",
+   "n": "67",
+   "pct_recorded_as_dictionary_requires": "0.0"
+  },
+  {
+   "period": "2020",
+   "Yes": "1",
+   "No": "0",
+   "missing": "6",
+   "n": "7",
+   "pct_recorded_as_dictionary_requires": "14.3"
+  },
+  {
+   "period": "2021-23",
+   "Yes": "1",
+   "No": "0",
+   "missing": "31",
+   "n": "32",
+   "pct_recorded_as_dictionary_requires": "3.1"
+  }
+ ],
+ "onset_delay": {
+  "n_nonmissing_all_rows": 1203,
+  "share_at_multiples_of_24": 0.415,
+  "quantiles_all_rows": {
+   "0.25": 4.0,
+   "0.5": 24.0,
+   "0.75": 72.0,
+   "0.9": 125.79999999999995,
+   "0.99": 383.52000000000044
+  },
+  "N2_labels": 617,
+  "N2_with_delay_recorded": 550,
+  "N2_with_delay_gt_threshold": 109,
+  "threshold_hours_assumed": 72
+ }
+}

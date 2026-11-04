@@ -1,0 +1,12 @@
+\begin{table}[htbp]\centering\small
+\caption{Calibration of out-of-fold predictions (nested CV). Recalibration maps were fitted inside each outer training fold only; no method was selected on test data. Slope, intercept and Brier score are means over the 5 repeats.}\label{tab:recal}
+\begin{tabular}{>{\raggedright\arraybackslash}p{5.6cm}rrrr}
+\toprule
+Model & AUROC & Slope & Intercept & Brier \\
+\midrule
+Primary model, no recalibration (pre-specified) & 0.863 & 1.14 & -0.01 & 0.143 \\
+In-fold Platt scaling & 0.863 & 1.06 & -0.01 & 0.141 \\
+In-fold isotonic regression & 0.861 & 0.84 & -0.02 & 0.142 \\
+\bottomrule
+\end{tabular}
+\end{table}

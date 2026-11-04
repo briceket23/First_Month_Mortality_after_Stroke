@@ -1,0 +1,311 @@
+{
+ "synthetic": false,
+ "n_tickets": 60,
+ "pass": 55,
+ "fail": 0,
+ "human": 5,
+ "no_check": 0,
+ "letter_covers_all_reviewer_items": true,
+ "rows": [
+  {
+   "ticket": "DATA-DUP-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "DATA-DUP-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "DATA-DATE-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "DATA-DATE-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "DATA-DATE-003",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "DATA-DICT-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "DATA-DICT-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "OUTCOME-TIME-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "OUTCOME-TIME-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "OUTCOME-TIME-003",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "OUTCOME-TIME-004",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "OUTCOME-REC-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "OUTCOME-REC-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "OUTCOME-REC-003",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "OUTCOME-REC-004",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "OUTCOME-REC-005",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "OUTCOME-REC-006",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "EPI-MORT-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "EPI-MORT-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "EPI-SEL-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "EPI-SEL-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "EPI-SEL-003",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "EPI-SEL-004",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "EPI-SURV-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "VAL-TEMP-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "VAL-TEMP-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "VAL-TEMP-003",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "STAT-AUC-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "STAT-AUC-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "STAT-CAL-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "STAT-RISK-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "STAT-RISK-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "MODEL-IMP-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "MODEL-IMP-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "MODEL-LIST-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "MODEL-COMP-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "MODEL-LEAK-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "MODEL-LEAK-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "XAI-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "XAI-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "XAI-003",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "CLAIM-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "CLAIM-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "CLAIM-003",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "CLAIM-004",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "REPRO-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "REPRO-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "REPRO-003",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "REPRO-004",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "SUBM-001",
+   "status": "HUMAN",
+   "note": "corresponding author at upload (portal item types)"
+  },
+  {
+   "ticket": "SUBM-002",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "SUBM-003",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "SUBM-004",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "DECL-001",
+   "status": "HUMAN",
+   "note": "corresponding author (IRB letter)"
+  },
+  {
+   "ticket": "DECL-002",
+   "status": "HUMAN",
+   "note": "all co-authors"
+  },
+  {
+   "ticket": "DECL-003",
+   "status": "HUMAN",
+   "note": "all co-authors"
+  },
+  {
+   "ticket": "DECL-004",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "DECL-005",
+   "status": "HUMAN",
+   "note": "all co-authors"
+  },
+  {
+   "ticket": "STAT-SIZE-001",
+   "status": "PASS",
+   "note": ""
+  },
+  {
+   "ticket": "ADMIN-001",
+   "status": "PASS",
+   "note": ""
+  }
+ ]
+}

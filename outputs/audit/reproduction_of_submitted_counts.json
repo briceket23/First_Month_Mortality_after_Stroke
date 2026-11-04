@@ -1,0 +1,18 @@
+{
+  "after_dedup": 1615,
+  "observed": 803,
+  "inferred": 218,
+  "unlabelled": 594,
+  "labelled": 1021,
+  "deaths": 345,
+  "mortality_pct": 33.8,
+  "observed_only_deaths": 162,
+  "class_counts": {
+    "observed_death1": 803,
+    "unlabelled": 594,
+    "inferred_inhosp_death_le30": 183,
+    "inferred_later_followup_alive": 23,
+    "inferred_long_stay_alive": 6,
+    "inferred_inhosp_death_gt30": 6
+  }
+}
